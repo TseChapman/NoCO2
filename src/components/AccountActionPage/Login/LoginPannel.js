@@ -15,7 +15,7 @@ function LoginPannel() {
       const userCredential = await signInWithEmailAndPassword(auth, loginInput.email, loginInput.password);
       const user = userCredential.user;
       //alert(user.uid);
-      navigate("/dashboard", { state: { uid: user.uid } });
+      navigate("/NoCO2/dashboard", { state: { uid: user.uid } });
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -74,7 +74,7 @@ function LoginPannel() {
           </form>
           <hr class="z-10 w-full mt-4 border-black" />
           <div class="text-2xl mb-1">
-            Don't have an account: <Link to="/signup">Sign Up</Link>
+            Don't have an account: <Link to="/NoCO2/signup">Sign Up</Link>
           </div>
         </div>
       </div>

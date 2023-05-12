@@ -6,10 +6,10 @@ import { useRoutes } from 'react-router-dom';
 
 function AppRoutes() {
   let element = useRoutes([
-    {path: '/NoCO2', element: <Main />},
-    {path: '/signup', element: <SignUp />},
-    {path: '/login', element: <Login />},
-    {path:'/dashboard', element: <Dashboard />}
+    {path: '/NoCO2/', element: <Main />},
+    {path: '/NoCO2/signup', element: <SignUp />},
+    {path: '/NoCO2/login', element: <Login />},
+    {path:'/NoCO2/dashboard', element: <Dashboard />}
   ])
 
   return element;
