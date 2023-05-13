@@ -17,12 +17,12 @@ function Navbar() {
         <div class="ml-auto">
           {location.pathname === '/NoCO2/' && (
             <Link to="/NoCO2/signup">
-              <button class="bg-cloudy h-11 rounded-xl text-merino w-32 text-2xl">Sign Up</button>
+              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl">Sign Up</button>
             </Link>
           )}
           {location.pathname === '/NoCO2/' && (
             <Link to="/NoCO2/login">
-              <button class="bg-cloudy h-11 rounded-xl text-merino w-32 text-2xl ml-4">Login</button>
+              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl ml-4">Login</button>
             </Link>
           )}
         </div>
