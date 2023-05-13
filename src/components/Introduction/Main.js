@@ -9,7 +9,7 @@ export class Main extends Component {
     return (
       <div class="min-h-max">
         <img class="z-0 h-screen w-screen object-cover object-center absolute" src={backgroundImage} alt='Background'/>
-        <div class="flex flex-col justify-center items-center h-screen w-full">
+        <div class="flex flex-col justify-center items-center h-screen w-full overflow-y-auto">
           <img class="z-10 mt-16 sm:w-2/4 sm:h-2/6 object-contain" src={logo} alt='Logo'/>
           <div class="z-10 mt-4 w-4/5 lg:text-7xl md:text-6xl text-5xl text-center text-cabbagePoint">
             Shape the Future!
