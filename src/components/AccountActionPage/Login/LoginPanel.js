@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-function LoginPannel() {
+function LoginPanel() {
   const auth = getAuth();
   const navigate = useNavigate(); // add useNavigate hook
   const [loginInput, setLoginInput] = useState({
@@ -83,4 +83,4 @@ function LoginPannel() {
   );
 }
 
-export default LoginPannel
+export default LoginPanel

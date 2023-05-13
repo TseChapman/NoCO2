@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-function SignUpPannel() {
+function SignUpPanel() {
   const auth = getAuth();
   const navigate = useNavigate(); // add useNavigate hook
   const [signUpInput, setSignUpInput] = useState({
@@ -84,4 +84,4 @@ function SignUpPannel() {
   );
 }
 
-export default SignUpPannel
+export default SignUpPanel
