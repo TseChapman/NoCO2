@@ -10,7 +10,6 @@ function SignUpPanel() {
     password: ""
   });
 
-
   async function createUser() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, signUpInput.email, signUpInput.password);
