@@ -65,13 +65,13 @@ function LineGraph({uid}) {
 
   return (
     <div>
-      <div class="flex flex-row justify-between px-4 mb-4">
-        <div class="text-5xl font-bold">Emission Line Chart</div>
+      <div class="flex md:flex-row md:justify-between flex-col justify-start px-4 mb-4">
+        <div class="lg:text-5xl md:text-4xl text-3xl font-bold">Emission Line Chart</div>
         <div class="relative bg-cloudy rounded-xl w-2/5">
           <div class="flex h-full">
             {tabsData.map((tab, idx) => {
               const isLastButton = idx === tabsData.length - 1;
-              const buttonClasses = `z-10 px-4 flex items-center text-2xl text-merino justify-center${isLastButton ? '' : ' relative'}`;
+              const buttonClasses = `z-10 px-4 flex items-center lg:text-2xl md:text-xl text-lg text-merino justify-center${isLastButton ? '' : ' relative'}`;
 
               return (
                 <button
