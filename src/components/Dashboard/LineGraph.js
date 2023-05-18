@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, Label } from 'recharts';
 import '../../index.css';
 
 const tabsData = [
@@ -65,7 +65,7 @@ function LineGraph({uid}) {
 
   return (
     <div>
-      <div class="flex flex-row justify-between px-4">
+      <div class="flex flex-row justify-between px-4 mb-4">
         <div class="text-5xl font-bold">Emission Line Chart</div>
         <div class="relative bg-cloudy rounded-xl w-2/5">
           <div class="flex h-full">
@@ -93,14 +93,24 @@ function LineGraph({uid}) {
         </div>
       </div>
       <div style={{ margin: '0 auto' }}>
-        <ResponsiveContainer width='98%' aspect={4.0/2.0}>
+        <ResponsiveContainer width='98%' aspect={4.0/1.0}>
           <LineChart width={600} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 20 }}>
             <Line type="monotone" dataKey="total" stroke="#8884d8" />
             <Line type="monotone" dataKey="goal" stroke="#82ca9d" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-            <XAxis dataKey="date" />
-            <YAxis />
+            <XAxis dataKey="date">
+              <Label value="Date of Emission" offset={0} position="insideBottom" />
+            </XAxis>
+            <YAxis>
+            <Label
+              value="CO2 Emission (lb)"
+              angle={-90}
+              position="insideLeft"
+              style={{ textAnchor: 'middle' }}
+            />
+            </YAxis>
             <Tooltip />
+            <Legend></Legend>
           </LineChart>
         </ResponsiveContainer>
       </div>
