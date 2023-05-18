@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../index.css';
 import LineGraph from './LineGraph';
 import AddForm from './AddForm';
+import EmissionDetailPanel from './EmissionDetailPanel';
 
 export class Dashboard extends Component {
   render() {
@@ -13,6 +14,7 @@ export class Dashboard extends Component {
         </div>
         <div>
           <LineGraph uid={uid} />
+          <EmissionDetailPanel />
           <AddForm uid={uid} />
         </div>
       </div>
