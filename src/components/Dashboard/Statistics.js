@@ -7,13 +7,15 @@ function Statistics() {
 
   return (
     <div class="flex justify-center align-middle px-4 mb-4">
-      <div class="bg-matrix w-full p-3.5 rounded-2xl flex flex-row justify-between space-x-4">
+      <div class="bg-matrix w-full p-3.5 rounded-2xl flex flex-col md:flex-row justify-between md:flex-wrap lg:overflow-hidden">
         {statistic.map((card, idx) => {
           return (
-            <div class="h-56 bg-white rounded-2xl w-1/3">
-              <div>{card.statistic}</div>
-              <div>{card.topic}</div>
-              <div>{card.stat}</div>
+            <div class="h-56 w-full md:w-1/2 lg:w-1/3 p-2">
+              <div class="w-full h-full bg-white rounded-2xl p-3.5 shadow-2xl">
+                <div>{card.statistic}</div>
+                <div>{card.topic}</div>
+                <div>{card.stat}</div>
+              </div>
             </div>
           );
         })}
