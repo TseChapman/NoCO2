@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../../index.css';
 import LineGraph from './LineGraph';
-import AddForm from './AddForm';
 import EmissionDetailPanel from './EmissionDetailPanel';
+import Statistics from './Statistics';
 
 export class Dashboard extends Component {
   render() {
@@ -15,7 +15,7 @@ export class Dashboard extends Component {
         <div>
           <LineGraph uid={uid} />
           <EmissionDetailPanel />
-          <AddForm uid={uid} />
+          <Statistics />
         </div>
       </div>
     );
