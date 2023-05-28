@@ -1,7 +1,11 @@
+import TransportFormPanel from "./TransportFormPanel";
+
 function ActivityInputFormPanel() {
   return (
     <div>
-      temp
+      <div class="px-4">
+        <TransportFormPanel />
+      </div>
     </div>
   );
 }
