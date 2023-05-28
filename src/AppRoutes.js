@@ -2,7 +2,7 @@ import { Main } from "./components/Introduction/Main";
 import { SignUp } from "./components/AccountActionPage/SignUp/SignUp";
 import { Login } from "./components/AccountActionPage/Login/Login";
 import { Dashboard } from "./components/Dashboard/Dashboard";
-import { ActivityInputForm } from "./components/Dashboard/ActivityInputForm";
+import { ActivityInputForm } from "./components/ActivityInputForm/ActivityInputForm";
 import { useRoutes } from 'react-router-dom';
 
 function AppRoutes() {
