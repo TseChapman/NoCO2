@@ -11,7 +11,7 @@ function AppRoutes() {
     {path: '/NoCO2/signup', element: <SignUp />},
     {path: '/NoCO2/login', element: <Login />},
     {path: '/NoCO2/dashboard', element: <Dashboard />},
-    {path: '/NoCO2/dashboard/inputForm', element: <ActivityInputForm />}
+    {path: '/NoCO2/dashboard/activities', element: <ActivityInputForm />}
   ])
 
   return element;

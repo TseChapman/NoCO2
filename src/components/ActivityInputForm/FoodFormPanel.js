@@ -1,5 +1,4 @@
 function FoodFormPanel({activities, setActivities}) {
-  // TODO: For Food
   const handleAddFood = () => {
     const foodTypeInput = document.getElementById('foodType');
     const amountInput = document.getElementById('amount');
@@ -31,7 +30,6 @@ function FoodFormPanel({activities, setActivities}) {
 
   };
 
-  // TODO: For Food
   const handleDeleteFood = (food) => {
     // Delete the food entry
     const updatedFoods = activities.Foods.filter(
@@ -44,9 +42,8 @@ function FoodFormPanel({activities, setActivities}) {
     }));
   };
 
-  // TODO: For Food
   return (
-    <div class="w-full bg-matrix rounded-2xl p-3.5">
+    <div class="w-full bg-matrix rounded-2xl p-3.5 mb-4">
       <div class="w-full h-full rounded-2xl bg-white p-3.5 overflow-y-auto">
         <div class="lg:text-6xl md:text-5xl text-4xl font-bold mb-3">Food</div>
         <table class="min-w-full divide-y divide-gray-200 mb-3">

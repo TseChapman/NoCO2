@@ -11,7 +11,7 @@ function EmissionDetailPanel() {
           <div class="bg-white w-4/6 h-20 rounded-2xl p-2 shadow-inner shadow-limeGreen flex flex-row justify-between items-center lg:text-3xl md:text-2xl text-xl mr-4">
             <div>Current Emission:</div><div>XXX lb</div>
           </div>
-          <Link to="/NoCO2/dashboard/inputForm" class="w-2/6 h-20">
+          <Link to="/NoCO2/dashboard/activities" class="w-2/6 h-20">
             <button class="bg-cloudy w-full h-full rounded-2xl p-2 shadow-lg lg:text-4xl md:text-3xl text-2xl font-bold text-merino">Edit</button>
           </Link>
         </div>

@@ -43,7 +43,7 @@ function TransportFormPanel({activities, setActivities}) {
   };
 
   return (
-    <div class="w-full bg-matrix rounded-2xl p-3.5">
+    <div class="w-full bg-matrix rounded-2xl p-3.5 mb-4">
       <div class="w-full h-full rounded-2xl bg-white p-3.5 overflow-y-auto">
         <div class="lg:text-6xl md:text-5xl text-4xl font-bold mb-3">Transport</div>
         <table class="min-w-full divide-y divide-gray-200 mb-3">
