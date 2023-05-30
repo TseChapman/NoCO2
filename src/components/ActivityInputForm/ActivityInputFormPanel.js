@@ -16,6 +16,9 @@ function ActivityInputFormPanel() {
         <TransportFormPanel activities={activities} setActivities={setActivities}/>
         <FoodFormPanel activities={activities} setActivities={setActivities} />
         <UtilityFormPanel activities={activities} setActivities={setActivities} />
+        <div>
+          <button>Submit Activities</button>
+        </div>
       </div>
     </div>
   );
