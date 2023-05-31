@@ -26,11 +26,11 @@ function Navbar() {
             </Link>
           )}
           {location.pathname === '/NoCO2/dashboard' && (
-            <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl ml-4">Sign Out</button>
+            <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl mr-4">Sign Out</button>
           )}
           {location.pathname === '/NoCO2/dashboard/activities' && (
             <Link to="/NoCO2/dashboard">
-              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl ml-4">Back</button>
+              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl mr-4">Back</button>
             </Link>
           )}
         </div>
