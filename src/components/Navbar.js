@@ -5,7 +5,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 import icon from '../assets/Icon.png';
 
-function Navbar({setUser}) {
+function Navbar() {
   const location = useLocation();
   console.log(location.pathname);
 
