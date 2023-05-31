@@ -131,7 +131,8 @@ function FoodFormPanel({activities, setActivities}) {
             <input
               id="amount"
               class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
-              name="food_mpg"
+              name="food_kg"
+              placeholder="Kg or Serving..."
               type='text'
             />
           </div>

@@ -119,7 +119,8 @@ function TransportFormPanel({activities, setActivities}) {
             <input
               id="miles"
               class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
-              name="transport_mpg"
+              name="transport_miles"
+              placeholder="Miles..."
               type='text'
             />
           </div>

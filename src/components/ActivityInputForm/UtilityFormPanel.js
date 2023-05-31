@@ -111,7 +111,8 @@ function UtilityFormPanel({activities, setActivities}) {
             <input
               id="hours"
               class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
-              name="utility_mpg"
+              name="utility_hours"
+              placeholder="Hours..."
               type='text'
             />
           </div>
