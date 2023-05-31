@@ -11,7 +11,7 @@ function Statistics() {
         {statistic.map((card, idx) => {
           return (
             <div class="h-72 w-full md:w-1/2 lg:w-1/3 p-2">
-              <div class="w-full h-full bg-black rounded-2xl p-3.5 shadow-2xl flex flex-col justify-between">
+              <div class="w-full h-full bg-black rounded-2xl p-3.5 shadow-md flex flex-col justify-between">
                 <div>
                   <div class="text-merino text-2xl">{card.statistic}</div>
                   <div class="text-merino font-bold text-5xl">{card.topic}</div>

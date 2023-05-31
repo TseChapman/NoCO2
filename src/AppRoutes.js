@@ -2,6 +2,7 @@ import { Main } from "./components/Introduction/Main";
 import { SignUp } from "./components/AccountActionPage/SignUp/SignUp";
 import { Login } from "./components/AccountActionPage/Login/Login";
 import { Dashboard } from "./components/Dashboard/Dashboard";
+import { ActivityInputForm } from "./components/ActivityInputForm/ActivityInputForm";
 import { useRoutes } from 'react-router-dom';
 
 function AppRoutes() {
@@ -9,7 +10,8 @@ function AppRoutes() {
     {path: '/NoCO2/', element: <Main />},
     {path: '/NoCO2/signup', element: <SignUp />},
     {path: '/NoCO2/login', element: <Login />},
-    {path:'/NoCO2/dashboard', element: <Dashboard />}
+    {path: '/NoCO2/dashboard', element: <Dashboard />},
+    {path: '/NoCO2/dashboard/activities', element: <ActivityInputForm />}
   ])
 
   return element;
