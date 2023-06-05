@@ -12,7 +12,7 @@ function EmissionDetailPanel() {
             <div>Current Emission:</div><div>XXX lb</div>
           </div>
           <Link to="/NoCO2/dashboard/activities" class="w-2/6 h-20">
-            <button class="bg-cloudy w-full h-full rounded-2xl p-2 shadow-lg lg:text-4xl md:text-3xl text-2xl font-bold text-merino">Edit</button>
+            <button class="bg-cloudy w-full h-full rounded-2xl p-2 shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700 lg:text-4xl md:text-3xl text-2xl font-bold text-merino">Edit</button>
           </Link>
         </div>
       </div>

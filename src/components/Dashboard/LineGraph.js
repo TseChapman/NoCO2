@@ -71,7 +71,7 @@ function LineGraph({uid}) {
           <div class="flex h-full">
             {tabsData.map((tab, idx) => {
               const isLastButton = idx === tabsData.length - 1;
-              const buttonClasses = `z-10 px-4 flex items-center lg:text-2xl md:text-xl text-lg text-merino justify-center${isLastButton ? '' : ' relative'}`;
+              const buttonClasses = `z-10 px-4 flex items-center hover:underline hover:underline-offset-2 lg:text-2xl md:text-xl text-lg text-merino justify-center${isLastButton ? '' : ' relative'}`;
 
               return (
                 <button
