@@ -20,7 +20,7 @@ function SignUpPanel() {
       const errorCode = error.code;
       const errorMessage = error.message;
       // Handle the error
-      //alert(errorMessage);
+      alert(errorMessage);
     }
   }
 
