@@ -48,7 +48,6 @@ function LoginPanel() {
 
   const onSubmitForm = e => {
     e.preventDefault();
-    //alert(JSON.stringify(loginInput, null, 2));
     loginUser();
   }
 
@@ -103,7 +102,7 @@ function LoginPanel() {
         </div>
       </div>
     </div>
-    );
+  );
 }
 
 export default LoginPanel

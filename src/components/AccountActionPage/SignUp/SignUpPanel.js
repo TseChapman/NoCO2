@@ -50,7 +50,6 @@ function SignUpPanel() {
 
   const onSubmitForm = e => {
     e.preventDefault();
-    //alert(JSON.stringify(signUpInput, null, 2));
     createUser();
   }
 
