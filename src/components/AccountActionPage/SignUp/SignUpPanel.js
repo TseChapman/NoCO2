@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import CustomeAlert from "../../CustomeAlert";
 
 function SignUpPanel() {
   const auth = getAuth();
@@ -10,6 +11,25 @@ function SignUpPanel() {
     password: ""
   });
 
+  const [error, setError] = useState('');
+
+  function handleError(error) {
+    switch (error) {
+      case "invalid-email":
+        return "Invalid Email";
+      case "weak-password":
+        return "Password must be at least 6 characters";
+      case "email-already-in-use":
+        return "Email Already in Use";
+      case "missing-email":
+        return "Missing Email";
+      case "missing-password":
+        return "Missing Password";
+      default:
+        return "Internal Error";
+    }
+  }
+
   async function createUser() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, signUpInput.email, signUpInput.password);
@@ -18,9 +38,17 @@ function SignUpPanel() {
       //alert(user.uid);
     } catch (error) {
       const errorCode = error.code;
-      const errorMessage = error.message;
+      var errorMessage = error.message;
       // Handle the error
-      //alert(errorMessage);
+      console.log(errorCode);
+      console.log(errorMessage);
+
+      const regex = /\/(.*?)\)/;
+      const match = regex.exec(errorMessage);
+      const extractedText = match ? match[1] : '';
+      errorMessage = handleError(extractedText);
+
+      setError(errorMessage);
     }
   }
 
@@ -40,6 +68,7 @@ function SignUpPanel() {
 
   return (
     <div class="h-screen w-screen flex justify-center items-center">
+      <CustomeAlert message={error} />
       <div class="z-10 mt-20 bg-cloudy/90 w-2/4 h-5/6 rounded-2xl p-4 flex items-center justify-center">
         <div class="z-10 bg-white w-full h-full rounded-2xl p-8 overflow-y-auto">
           <div class="lg:text-5xl md:text-3xl text-2xl font-bold pb-4">Sign Up</div>
