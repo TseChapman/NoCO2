@@ -26,7 +26,7 @@ function Navbar() {
     <header class="z-20 w-screen p-3 bg-cabbagePoint fixed">
       <div class="flex md:flex-grow h-12">
         <div class="mr-auto">
-          <img class="z-10 mt-2 w-5/6 h-3/4 object-cover" src={icon} alt='Icon'/>
+          <img class="z-10 mt-2 w-11 h-10 object-cover" src={icon} alt='Icon'/>
         </div>
         <div class="ml-auto">
           {location.pathname === '/NoCO2/' && (
