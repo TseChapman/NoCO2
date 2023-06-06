@@ -22,8 +22,8 @@ const CustomeAlert = ({ message }) => {
   }
 
   return (
-    <div class="w-2/4 rounded-2xl p-2 bg-red-500 z-30 fixed top-3 left-0 right-0 mx-auto">
-      <div class="w-full h-full bg-white rounded-2xl p-4 text-black text-2xl">
+    <div className="w-2/4 rounded-2xl p-1 bg-red-500 z-30 fixed top-3 left-0 right-0 mx-auto slide-down-animation">
+      <div className="w-full h-full bg-merino rounded-2xl p-4 text-black text-3xl">
         {message}
       </div>
     </div>
