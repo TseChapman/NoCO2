@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const CustomeAlert = ({ message }) => {
+const CustomAlert = ({ message }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const CustomeAlert = ({ message }) => {
   );
 };
 
-export default CustomeAlert;
+export default CustomAlert;

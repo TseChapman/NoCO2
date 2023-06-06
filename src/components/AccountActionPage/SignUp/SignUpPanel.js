@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import CustomeAlert from "../../CustomeAlert";
+import CustomAlert from "../../CustomAlert";
 
 function SignUpPanel() {
   const auth = getAuth();
@@ -35,13 +35,9 @@ function SignUpPanel() {
       const userCredential = await createUserWithEmailAndPassword(auth, signUpInput.email, signUpInput.password);
       const user = userCredential.user;
       navigate("/NoCO2/dashboard", { state: { uid: user.uid } });
-      //alert(user.uid);
     } catch (error) {
-      const errorCode = error.code;
       var errorMessage = error.message;
       // Handle the error
-      console.log(errorCode);
-      console.log(errorMessage);
 
       const regex = /\/(.*?)\)/;
       const match = regex.exec(errorMessage);
@@ -54,7 +50,6 @@ function SignUpPanel() {
 
   const onSubmitForm = e => {
     e.preventDefault();
-    //alert(JSON.stringify(signUpInput, null, 2));
     createUser();
   }
 
@@ -68,7 +63,7 @@ function SignUpPanel() {
 
   return (
     <div class="h-screen w-screen flex justify-center items-center">
-      <CustomeAlert message={error} />
+      <CustomAlert message={error} />
       <div class="z-10 mt-20 bg-cloudy/90 w-2/4 h-5/6 rounded-2xl p-4 flex items-center justify-center">
         <div class="z-10 bg-white w-full h-full rounded-2xl p-8 overflow-y-auto">
           <div class="lg:text-5xl md:text-3xl text-2xl font-bold pb-4">Sign Up</div>
