@@ -35,13 +35,9 @@ function SignUpPanel() {
       const userCredential = await createUserWithEmailAndPassword(auth, signUpInput.email, signUpInput.password);
       const user = userCredential.user;
       navigate("/NoCO2/dashboard", { state: { uid: user.uid } });
-      //alert(user.uid);
     } catch (error) {
-      const errorCode = error.code;
       var errorMessage = error.message;
       // Handle the error
-      console.log(errorCode);
-      console.log(errorMessage);
 
       const regex = /\/(.*?)\)/;
       const match = regex.exec(errorMessage);
