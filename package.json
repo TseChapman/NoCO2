@@ -54,5 +54,8 @@
     "react-test-renderer": "^18.2.0",
     "tailwindcss": "^3.3.2"
   },
-  "homepage": "https://tsechapman.github.io/NoCO2"
+  "homepage": "https://tsechapman.github.io/NoCO2",
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
 }

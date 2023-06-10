@@ -1,14 +1,29 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, useLocation } from 'react-router-dom';
 import Navbar from '../../src/components/Navbar';
+import { initializeApp } from "firebase/app";
+import '@testing-library/jest-dom/extend-expect';
 
-// Mock the useLocation and useNavigate hooks
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useLocation: jest.fn(),
-  useNavigate: jest.fn(),
 }));
+
+jest.mock('../../src/assets/Icon.png', () => 'path/to/Icon.png');
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBVHmKBMBp2DTgKdw5m2_V3YvABLSDZGvY",
+  authDomain: "noco2-e46fa.firebaseapp.com",
+  projectId: "noco2-e46fa",
+  storageBucket: "noco2-e46fa.appspot.com",
+  messagingSenderId: "132897901391",
+  appId: "1:132897901391:web:9b4e1576f845a10a60133a",
+  measurementId: "G-TWKRL8G2KT"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 describe('Navbar', () => {
   beforeEach(() => {
@@ -16,9 +31,8 @@ describe('Navbar', () => {
   });
 
   it('renders Sign Up and Login buttons on the home page', () => {
-    // Mock the location.pathname to be '/'
     const mockLocation = { pathname: '/NoCO2/' };
-    jest.spyOn(React, 'useLocation').mockReturnValue(mockLocation);
+    useLocation.mockReturnValue(mockLocation);
 
     render(
       <MemoryRouter>
@@ -31,9 +45,8 @@ describe('Navbar', () => {
   });
 
   it('renders Sign Out button on the dashboard page', () => {
-    // Mock the location.pathname to be '/dashboard'
     const mockLocation = { pathname: '/NoCO2/dashboard' };
-    jest.spyOn(React, 'useLocation').mockReturnValue(mockLocation);
+    useLocation.mockReturnValue(mockLocation);
 
     render(
       <MemoryRouter>
@@ -45,9 +58,8 @@ describe('Navbar', () => {
   });
 
   it('renders Back button on the activities page', () => {
-    // Mock the location.pathname to be '/dashboard/activities'
     const mockLocation = { pathname: '/NoCO2/dashboard/activities' };
-    jest.spyOn(React, 'useLocation').mockReturnValue(mockLocation);
+    useLocation.mockReturnValue(mockLocation);
 
     render(
       <MemoryRouter>
