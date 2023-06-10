@@ -3,9 +3,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '.././index.css';
 import { getAuth, signOut } from "firebase/auth";
 
-import icon from '../assets/Icon.png';
+//import icon from '../assets/Icon.png';
 
 function Navbar() {
+  const icon = require('../assets/Icon.png');
   const location = useLocation();
   console.log(location.pathname);
 
