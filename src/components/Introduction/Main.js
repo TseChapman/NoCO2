@@ -22,7 +22,6 @@ export class Main extends Component {
               <button class="z-10 w-5/12 mt-12 bg-limeGreen hover:bg-merino rounded-2xl text-merino hover:text-limeGreen h-20 lg:text-5xl md:text-4xl text-3xl ml-4">Lets Get Started</button>
             </Link>
           </div>
-          
         </div>
       </div>
     );
