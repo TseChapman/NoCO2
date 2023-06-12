@@ -51,6 +51,21 @@
   animation-delay: 0.75s;
 }
 
+@keyframes slide-left {
+ 0% {
+  transform:translateX(300px);
+  opacity: 0;
+ }
+ 100% {
+  transform: translateX(0);
+  opacity: 1;
+ }
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out forwards;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
