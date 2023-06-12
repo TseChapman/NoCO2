@@ -16,7 +16,7 @@
   animation-duration: 0.5s; /* Adjust the animation duration as needed */
 }
 
-@keyframes slide-in {
+@keyframes slide-up {
   0% {
     transform: translateY(300px);
     opacity: 0;
@@ -27,26 +27,26 @@
   }
 }
 
-.animate-slide-in-delay-1 {
-  animation: slide-in 1s ease-out forwards;
+.animate-slide-up-delay-1 {
+  animation: slide-up 1s ease-out forwards;
   animation-duration: 2s;
   animation-delay: 0s;
 }
 
-.animate-slide-in-delay-2 {
-  animation: slide-in 1s ease-out forwards;
+.animate-slide-up-delay-2 {
+  animation: slide-up 1s ease-out forwards;
   animation-duration: 1.75s;
   animation-delay: 0.25s;
 }
 
-.animate-slide-in-delay-3 {
-  animation: slide-in 1s ease-out forwards;
+.animate-slide-up-delay-3 {
+  animation: slide-up 1s ease-out forwards;
   animation-duration: 1.5s;
   animation-delay: 0.50s;
 }
 
-.animate-slide-in-delay-4 {
-  animation: slide-in 1s ease-out forwards;
+.animate-slide-up-delay-4 {
+  animation: slide-up 1s ease-out forwards;
   animation-duration: 1.25s;
   animation-delay: 0.75s;
 }

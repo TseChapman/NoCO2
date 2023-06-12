@@ -5,9 +5,12 @@ function Statistics() {
     {statistic: "Emission Difference", topic: "Previous day", stat: "- XXX lb"}
   ]
 
+  const animationDelay = 0.2;
+  const animationDuration = 1;
+
   return (
     <div class="flex justify-center align-middle px-4 mb-4">
-      <div class="bg-matrix w-full p-3.5 rounded-2xl flex flex-col md:flex-row justify-between md:flex-wrap lg:overflow-hidden animate-slide-in-delay-2">
+      <div class="bg-matrix w-full p-3.5 rounded-2xl flex flex-col md:flex-row justify-between md:flex-wrap lg:overflow-hidden animate-slide-up-delay-2">
         {statistic.map((card, idx) => {
           return (
             <div class="h-72 w-full md:w-1/2 lg:w-1/3 p-2">
