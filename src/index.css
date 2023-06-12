@@ -16,6 +16,37 @@
   animation-duration: 0.5s; /* Adjust the animation duration as needed */
 }
 
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-delay-1 {
+  animation: slide-in 0.5s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.animate-slide-in-delay-2 {
+  animation: slide-in 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.animate-slide-in-delay-3 {
+  animation: slide-in 0.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.animate-slide-in-delay-4 {
+  animation: slide-in 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
