@@ -67,7 +67,7 @@ function LineGraph({uid}) {
     <div>
       <div class="flex md:flex-row md:justify-between flex-col justify-start px-4 mb-4">
         <div class="lg:text-5xl md:text-4xl text-3xl font-bold">Emission Line Chart</div>
-        <div class="relative bg-cloudy rounded-xl w-2/5">
+        <div class="relative bg-cloudy rounded-xl w-2/5 slide-down-animation">
           <div class="flex h-full">
             {tabsData.map((tab, idx) => {
               const isLastButton = idx === tabsData.length - 1;
