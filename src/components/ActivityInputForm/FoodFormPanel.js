@@ -111,7 +111,7 @@ function FoodFormPanel({activities, setActivities}) {
               <option value="Pork">Pork</option>
               <option value="Chicken">Chicken</option>
               <option value="Fish">Fish</option>
-              <option value="Dark_Chocolate">Dark Chocolate</option>
+              <option value="Dark Chocolate">Dark Chocolate</option>
               <option value="Eggs">Eggs</option>
               <option value="Berries">Berries</option>
               <option value="Rice">Rice</option>
@@ -121,10 +121,10 @@ function FoodFormPanel({activities, setActivities}) {
               <option value="Nuts">Nuts</option>
               <option value="Potatoes">Potatoes</option>
               <option value="Orange">Orange</option>
-              <option value="Root_Vegetables">Root_Vegetables</option>
+              <option value="Root Vegetables">Root_Vegetables</option>
               <option value="Milk">Milk</option>
-              <option value="Soy_Milk">Soy Milk</option>
-              <option value="Almond_Milk">Almond Milk</option>
+              <option value="Soy Milk">Soy Milk</option>
+              <option value="Almond Milk">Almond Milk</option>
             </select>
           </div>
           <div class="md:w-2/5 w-full h-20 py-3 px-2">
