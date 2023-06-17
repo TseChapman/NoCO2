@@ -11,8 +11,8 @@ function UtilityFormPanel({activities, setActivities}) {
     // Check valid inputs
     if (utilityType !== 'Select Utility Type' && hours !== '' && numericRegex.test(hours)) {
       const newUtility = {
-        UtilityType: utilityType,
-        Hours: hours
+        Type: utilityType,
+        Amount: hours
       }
 
       // Update Utilities list
@@ -70,10 +70,10 @@ function UtilityFormPanel({activities, setActivities}) {
             {activities.Utilities.map((utility, idx) => (
               <tr key={idx}>
                 <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
-                  {utility.UtilityType}
+                  {utility.Type}
                 </td>
                 <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
-                  {utility.Hours}
+                  {utility.Amount}
                 </td>
                 <td class="md:px-6 px-2 py-2">
                   <div class="flex items-center">
