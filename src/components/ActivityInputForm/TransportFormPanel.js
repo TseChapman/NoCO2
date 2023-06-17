@@ -11,8 +11,8 @@ function TransportFormPanel({activities, setActivities}) {
     // Check valid inputs
     if (transportType !== 'Select Transport Type' && miles !== '' && numericRegex.test(miles)) {
       const newTransport = {
-        TransportType: transportType,
-        Miles: miles
+        Type: transportType,
+        Amount: miles
       }
 
       // Update Transports list
@@ -70,10 +70,10 @@ function TransportFormPanel({activities, setActivities}) {
             {activities.Transports.map((transport, idx) => (
               <tr key={idx}>
                 <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
-                  {transport.TransportType}
+                  {transport.Type}
                 </td>
                 <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
-                  {transport.Miles}
+                  {transport.Amount}
                 </td>
                 <td class="md:px-6 px-2 py-2">
                   <div class="flex items-center">
@@ -105,7 +105,7 @@ function TransportFormPanel({activities, setActivities}) {
             >
               <option value="Select Transport Type">Select Transport Type</option>
               <option value="Truck">Truck</option>
-              <option value="4 Door Petrol_Car">4 Door Petrol Car</option>
+              <option value="4 Door Petrol Car">4 Door Petrol Car</option>
               <option value="Medium Diesel-Powered Car">Medium Diesel-Powered Car</option>
               <option value="Plane">Plane Travel</option>
               <option value="Motorbike">Motorbike</option>

@@ -11,7 +11,7 @@ function FoodFormPanel({activities, setActivities}) {
     // Check valid inputs
     if (foodType !== 'Select foood Type' && amount !== '' && numericRegex.test(amount)) {
       const newFood = {
-        FoodType: foodType,
+        Type: foodType,
         Amount: amount
       }
 
@@ -59,7 +59,7 @@ function FoodFormPanel({activities, setActivities}) {
                 scope="col"
                 class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl text-lg font-medium text-gray-500 uppercase tracking-wider"
               >
-                Amount (kg or Serving)
+                Amount (Oz or Serving)
               </th>
               <th scope="col" class="relative md:px-6 px-2 py-3">
                 <span class="sr-only">Delete</span>
@@ -70,7 +70,7 @@ function FoodFormPanel({activities, setActivities}) {
             {activities.Foods.map((food, idx) => (
               <tr key={idx}>
                 <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
-                  {food.FoodType}
+                  {food.Type}
                 </td>
                 <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
                   {food.Amount}
@@ -111,28 +111,29 @@ function FoodFormPanel({activities, setActivities}) {
               <option value="Pork">Pork</option>
               <option value="Chicken">Chicken</option>
               <option value="Fish">Fish</option>
-              <option value="Dark Chocolate">Dark Chocolate</option>
-              <option value="Eggs">Eggs</option>
-              <option value="Berries">Berries</option>
+              <option value="Dark Chocolate">Dark Chocolate (Serving)</option>
+              <option value="Eggs">Eggs (Serving)</option>
+              <option value="Berries">Berries (Serving)</option>
               <option value="Rice">Rice</option>
+              <option value="Banana">Banana (Serving)</option>
               <option value="Tofu">Tofu</option>
-              <option value="Apple">Apple</option>
+              <option value="Apple">Apple (Serving)</option>
               <option value="Brassica">Brassica</option>
               <option value="Nuts">Nuts</option>
               <option value="Potatoes">Potatoes</option>
-              <option value="Orange">Orange</option>
-              <option value="Root Vegetables">Root_Vegetables</option>
-              <option value="Milk">Milk</option>
-              <option value="Soy Milk">Soy Milk</option>
-              <option value="Almond Milk">Almond Milk</option>
+              <option value="Orange">Orange (Serving)</option>
+              <option value="Root Vegetables">Root Vegetables</option>
+              <option value="Milk">Milk (Serving)</option>
+              <option value="Soy Milk">Soy Milk (Serving)</option>
+              <option value="Almond Milk">Almond Milk (Serving)</option>
             </select>
           </div>
           <div class="md:w-2/5 w-full h-20 py-3 px-2">
             <input
               id="amount"
               class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
-              name="food_kg"
-              placeholder="Kg or Serving..."
+              name="food_oz"
+              placeholder="Oz or Serving..."
               type='text'
             />
           </div>
