@@ -35,7 +35,7 @@ git clone https://github.com/TseChapman/NoCO2.git
 2. Navigate to the project directory:
 
 ```bash
-cd NoCo2
+cd NoCO2
 ```
 
 3. Install the dependencies:
