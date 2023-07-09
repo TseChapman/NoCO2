@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUser } from "../../../api/NoCO2_api";
 import CustomAlert from "../../CustomAlert";
 
 function SignUpPanel() {
@@ -47,10 +48,15 @@ function SignUpPanel() {
     }
   }
 
-  const onSubmitForm = e => {
-    e.preventDefault();
-    const user = signUpUser();
-    navigate("/NoCO2/dashboard");
+  const onSubmitForm = async e => {
+    try {
+      e.preventDefault();
+      const user = await signUpUser();
+      await createUser(user.uid);
+      await navigate("/NoCO2/dashboard");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const onFormUpdate = e => {
