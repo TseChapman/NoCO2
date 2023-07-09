@@ -34,7 +34,7 @@ function SignUpPanel() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, signUpInput.email, signUpInput.password);
       const user = userCredential.user;
-      navigate("/NoCO2/dashboard", { state: { uid: user.uid } });
+      navigate("/NoCO2/dashboard");
     } catch (error) {
       var errorMessage = error.message;
       // Handle the error
