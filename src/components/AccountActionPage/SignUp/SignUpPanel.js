@@ -30,11 +30,10 @@ function SignUpPanel() {
     }
   }
 
-  async function createUser() {
+  async function signUpUser() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, signUpInput.email, signUpInput.password);
-      const user = userCredential.user;
-      navigate("/NoCO2/dashboard");
+      return userCredential.user;
     } catch (error) {
       var errorMessage = error.message;
       // Handle the error
@@ -50,7 +49,8 @@ function SignUpPanel() {
 
   const onSubmitForm = e => {
     e.preventDefault();
-    createUser();
+    const user = signUpUser();
+    navigate("/NoCO2/dashboard");
   }
 
   const onFormUpdate = e => {

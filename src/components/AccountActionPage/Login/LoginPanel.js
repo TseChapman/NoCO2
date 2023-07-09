@@ -31,8 +31,7 @@ function LoginPanel() {
   async function loginUser() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, loginInput.email, loginInput.password);
-      const user = userCredential.user;
-      navigate("/NoCO2/dashboard");
+      return userCredential.user;
     } catch (error) {
       var errorMessage = error.message;
       // Handle the error
@@ -48,7 +47,8 @@ function LoginPanel() {
 
   const onSubmitForm = e => {
     e.preventDefault();
-    loginUser();
+    const user = loginUser();
+    navigate("/NoCO2/dashboard");
   }
 
   const onFormUpdate = e => {
