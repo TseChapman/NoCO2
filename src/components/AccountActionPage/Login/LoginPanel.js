@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { createUser } from "../../../api/NoCO2_api";
 import CustomAlert from "../../CustomAlert";
 
 function LoginPanel() {
@@ -32,7 +33,7 @@ function LoginPanel() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, loginInput.email, loginInput.password);
       const user = userCredential.user;
-      navigate("/NoCO2/dashboard", { state: { uid: user.uid } });
+      return user;
     } catch (error) {
       var errorMessage = error.message;
       // Handle the error
@@ -46,9 +47,15 @@ function LoginPanel() {
     }
   }
 
-  const onSubmitForm = e => {
-    e.preventDefault();
-    loginUser();
+  const onSubmitForm = async e => {
+    try {
+      e.preventDefault();
+      const user = await loginUser();
+      await createUser(user.uid);
+      await navigate("/NoCO2/dashboard");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const onFormUpdate = e => {

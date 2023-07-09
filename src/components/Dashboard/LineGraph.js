@@ -17,7 +17,7 @@ const tabsData = [
   },
 ];
 
-function LineGraph({uid}) {
+function LineGraph() {
   const data = [{date: '5/6/2023', total: 2.5, goal: 7.3, amt: 2400}, {date: '5/7/2023', total: 3.5, goal: 7.3, amt: 2400}, {date: '5/8/2023', total: 6.8, goal: 7.3, amt: 2400},  {date: '5/9/2023', total: 9.0, goal: 7.3, amt: 2400}];
   const [selectedPeriod, setSelectedPeriod] = useState("");
   const [emissions, setEmission] = useState({});
@@ -26,27 +26,6 @@ function LineGraph({uid}) {
   const [tabWidth, setTabWidth] = useState(0);
   const [tabLeft, setTabLeft] = useState(0);
   const tabsRef = useRef([]);
-
-  /*
-  useEffect(() => {
-    // This code will only run once when the component is mounted
-    fetch('api/custcreate', {
-      method: 'POST',
-      body: JSON.stringify({ key: 'some value' }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => response.text())
-      .then(data => console.log(data))
-      .catch(error => console.error(error));
-      console.log("useEffect");
-    return () => {
-      // This code will run when the component is unmounted
-      console.log('Component unmounted');
-    };
-  }, []);
-  */
 
   useEffect(() => {
     function setTabPosition() {
