@@ -10,17 +10,15 @@ const tabsData = [
     label: "Month",
   },
   {
-    label: "Year",
+    label: "6 Months",
   },
   {
-    label: "All",
+    label: "Year",
   },
 ];
 
-function LineGraph() {
-  const data = [{date: '5/6/2023', total: 2.5, goal: 7.3, amt: 2400}, {date: '5/7/2023', total: 3.5, goal: 7.3, amt: 2400}, {date: '5/8/2023', total: 6.8, goal: 7.3, amt: 2400},  {date: '5/9/2023', total: 9.0, goal: 7.3, amt: 2400}];
-  const [selectedPeriod, setSelectedPeriod] = useState("");
-  const [emissions, setEmission] = useState({});
+function LineGraph({emissionHistory}) {
+  const [data, setData] = useState();
 
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabWidth, setTabWidth] = useState(0);
@@ -30,17 +28,37 @@ function LineGraph() {
   useEffect(() => {
     function setTabPosition() {
       const currentTab = tabsRef.current[activeTabIndex];
-      //console.log(currentTab?.offsetLeft, currentTab?.clientWidth);
       setTabLeft(currentTab?.offsetLeft ?? 0);
       setTabWidth(currentTab?.clientWidth ?? 0);
     }
 
-    console.log(tabsData[activeTabIndex].label);
     setTabPosition();
     window.addEventListener("resize", setTabPosition);
 
     return () => window.removeEventListener("resize", setTabPosition);
   }, [activeTabIndex]);
+
+  useEffect(() => {
+    async function filterEmissionHistByTab() {
+      const selectedTab = tabsData[activeTabIndex].label;
+      let filteredHistory = [];
+
+      if (emissionHistory.length > 0) {
+        filteredHistory = emissionHistory;
+        if (selectedTab === "Week") {
+          filteredHistory = emissionHistory.slice(-7);
+        } else if (selectedTab === "Month") {
+          filteredHistory = emissionHistory.slice(-30);
+        } else if (selectedTab === "6 Months") {
+          filteredHistory = emissionHistory.slice(-180);
+        }
+
+        setData(filteredHistory);
+      }
+    }
+
+    filterEmissionHistByTab();
+  }, [activeTabIndex, emissionHistory]);
 
   return (
     <div>
@@ -50,7 +68,7 @@ function LineGraph() {
           <div class="flex h-full">
             {tabsData.map((tab, idx) => {
               const isLastButton = idx === tabsData.length - 1;
-              const buttonClasses = `z-10 px-4 flex items-center hover:underline hover:underline-offset-2 lg:text-2xl md:text-xl text-lg text-merino justify-center${isLastButton ? '' : ' relative'}`;
+              const buttonClasses = `z-10 px-2 flex items-center hover:underline hover:underline-offset-2 lg:text-xl md:text-lg text-md text-merino justify-center${isLastButton ? '' : ' relative'}`;
 
               return (
                 <button
@@ -74,11 +92,11 @@ function LineGraph() {
       <div style={{ margin: '0 auto' }}>
         <ResponsiveContainer width='98%' aspect={4.0/1.0}>
           <LineChart width={600} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 20 }}>
-            <Line type="monotone" dataKey="total" stroke="#8884d8" />
-            <Line type="monotone" dataKey="goal" stroke="#82ca9d" />
+            <Line type="monotone" dataKey="Total" stroke="#8884d8" />
+            <Line type="monotone" dataKey="Goal" stroke="#82ca9d" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-            <XAxis dataKey="date">
-              <Label value="Date of Emission" offset={0} position="insideBottom" />
+            <XAxis dataKey="DateTime">
+              <Label value="Date of Emission (UTC)" offset={-5} position="insideBottom" />
             </XAxis>
             <YAxis>
             <Label
