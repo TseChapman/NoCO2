@@ -1,40 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getAuth } from "firebase/auth";
+import StatisticsCard from "./StatisticsCard";
+import { getEmissionStatistics } from "../../api/NoCO2_api";
 
 function Statistics() {
-  const statistic = [
-    {statistic: "Highest Emission Activity", topic: "Transport", stat: "XX%"},
-    {statistic: "Average Emission", topic: "XXX days", stat: "XXX lb"},
-    {statistic: "Emission Difference", topic: "Previous day", stat: "- XXX lb"}
-  ]
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [statistics, setStatistics] = useState([]);
 
-  function handleLoaded() {
-    setIsLoaded(true);
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const auth = getAuth();
+        const uid = auth.currentUser ? auth.currentUser.uid : null;
+        const emissionStatistics = await getEmissionStatistics(uid);
+        setStatistics(emissionStatistics);
+      } catch (error) {
+        // Handle the error here
+        console.error(error);
+      }
+    };
 
-  const animationDelay = 0.2;
-  const animationDuration = 1;
+    fetchData();
+  }, []);
 
   return (
     <div class="flex justify-center align-middle px-4 mb-4">
       <div class="bg-matrix w-full p-3.5 rounded-2xl flex flex-col md:flex-row justify-between md:flex-wrap lg:overflow-hidden animate-slide-up-delay-2">
-        {statistic.map((card, idx) => {
-          return (
-            <div class="h-72 w-full md:w-1/2 lg:w-1/3 p-2">
-              <div
-                class="w-full h-full bg-black rounded-2xl p-3.5 shadow-md shadow-gray-700 hover:shadow-lg hover:shadow-gray-700 flex flex-col justify-between animate-slide-left"
-                style={{animationDelay: `${1 + animationDelay * idx}s`, animationDuration: `${animationDuration}s`, opacity: `${isLoaded ? '100' : '0'}`}}
-                onLoad={handleLoaded}
-              >
-                <div>
-                  <div class="text-merino text-2xl">{card.statistic}</div>
-                  <div class="text-merino font-bold text-5xl">{card.topic}</div>
-                </div>
-                <div class="text-merino font-bold text-5xl self-end">{card.stat}</div>
-              </div>
-            </div>
-          );
-        })}
+        {statistics?.length > 0 &&
+          statistics.map((card, idx) => {
+            return (
+            <StatisticsCard
+              idx={idx}
+              card={card}
+            />);
+          }
+        )}
       </div>
     </div>
   );
