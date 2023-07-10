@@ -40,7 +40,7 @@ function Dashboard() {
     };
 
     fetchData();
-  }, [emissionHistory]);
+  }, []);
 
   return (
     <div>
@@ -48,7 +48,7 @@ function Dashboard() {
         empty
       </div>
       <div>
-        <LineGraph data={emissionHistory}/>
+        <LineGraph emissionHistory={emissionHistory}/>
         <EmissionDetailPanel goal={goal} curEmission={curEmission}/>
         <Statistics />
       </div>
