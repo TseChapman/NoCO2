@@ -18,10 +18,10 @@ function StatisticsCard({idx, card}) {
         onLoad={handleLoaded}
       >
         <div>
-          <div class="text-merino text-2xl">{card.statistic}</div>
-          <div class="text-merino font-bold text-5xl">{card.topic}</div>
+          <div class="text-merino text-2xl">{card.Statistic}</div>
+          <div class="text-merino font-bold text-5xl">{card.Topic}</div>
         </div>
-        <div class="text-merino font-bold text-5xl self-end">{card.stat}</div>
+        <div class="text-merino font-bold text-5xl self-end">{card.Stat}</div>
       </div>
     </div>
   );
