@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getAuth } from "firebase/auth";
-import { submitUserActivities } from "../../api/NoCO2_api";
+import { getUserActivities, submitUserActivities } from "../../api/NoCO2_api";
 import TransportFormPanel from "./TransportFormPanel";
 import FoodFormPanel from "./FoodFormPanel";
 import UtilityFormPanel from "./UtilityFormPanel";
@@ -11,6 +11,24 @@ function ActivityInputFormPanel() {
     Foods:[],
     Utilities:[]
   })
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const auth = getAuth();
+        const uid = auth.currentUser ? auth.currentUser.uid : null;
+        const userActivities = await getUserActivities(uid);
+        if (userActivities != null) {
+          setActivities(userActivities)
+        }
+      } catch (error) {
+        // Handle the error here
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleSubmitActivities = async () => {
     try {
