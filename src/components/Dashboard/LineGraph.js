@@ -64,11 +64,11 @@ function LineGraph({emissionHistory}) {
     <div>
       <div class="flex md:flex-row md:justify-between flex-col justify-start px-4 mb-4">
         <div class="lg:text-5xl md:text-4xl text-3xl font-bold">Emission Line Chart</div>
-        <div class="relative bg-cloudy rounded-xl w-2/5 slide-down-animation">
+        <div class="relative bg-cloudy rounded-xl md:w-2/5 w-4/5 slide-down-animation">
           <div class="flex h-full">
             {tabsData.map((tab, idx) => {
               const isLastButton = idx === tabsData.length - 1;
-              const buttonClasses = `z-10 px-2 flex items-center hover:underline hover:underline-offset-2 lg:text-xl md:text-lg text-md text-merino justify-center${isLastButton ? '' : ' relative'}`;
+              const buttonClasses = `z-10 px-2 flex items-center hover:underline hover:underline-offset-2 lg:text-xl md:text-lg text-lg text-merino justify-center${isLastButton ? '' : ' relative'}`;
 
               return (
                 <button

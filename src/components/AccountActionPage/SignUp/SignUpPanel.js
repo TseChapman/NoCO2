@@ -111,6 +111,7 @@ function SignUpPanel() {
                     height={35}
                     width={35}
                     color='#f5ece5'
+                    secondaryColor="#b0aca2"
                   /> :
                   "SIGN UP"
                 }
