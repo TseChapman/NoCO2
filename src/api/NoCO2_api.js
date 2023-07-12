@@ -24,6 +24,7 @@ export async function createUser(uid) {
     //console.log(responseData.reply);
   } catch (error) {
     console.error(error);
+    throw new Error(error);
   }
 }
 
@@ -55,6 +56,7 @@ export async function getEmissionHistory(uid) {
     return responseData.History;
   } catch (error) {
     console.error(error);
+    throw new Error(error);
   }
 }
 
@@ -86,6 +88,7 @@ export async function getEmissionStatistics(uid) {
     return responseData.Statistics;
   } catch (error) {
     console.error(error);
+    throw new Error(error);
   }
 }
 
@@ -123,6 +126,7 @@ export async function getUserActivities(uid) {
     return activities;
   } catch (error) {
     console.error(error);
+    throw new Error(error);
   }
 }
 
@@ -156,5 +160,6 @@ export async function submitUserActivities(uid, activities) {
     //console.log(responseData);
   } catch (error) {
     console.error(error);
+    throw new Error(error);
   }
 }
