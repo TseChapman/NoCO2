@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { createUser } from "../../../api/NoCO2_api";
+import { Oval } from 'react-loader-spinner';
 import CustomAlert from "../../CustomAlert";
 
 function SignUpPanel() {
@@ -11,6 +12,7 @@ function SignUpPanel() {
     email: "",
     password: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState('');
 
@@ -51,10 +53,13 @@ function SignUpPanel() {
   const onSubmitForm = async e => {
     try {
       e.preventDefault();
+      setIsLoading(true);
       const user = await signUpUser();
       await createUser(user.uid);
+      setIsLoading(false);
       await navigate("/NoCO2/dashboard");
     } catch (error) {
+      setIsLoading(false);
       console.error(error);
     }
   }
@@ -96,10 +101,18 @@ function SignUpPanel() {
                 />
               </label>
               <button
-                class="mt-4 h-20 w-full rounded-2xl bg-matrix text-merino text-3xl font-bold"
+                class="mt-4 h-20 w-full rounded-2xl bg-matrix text-merino text-3xl font-bold flex items-center justify-center"
                 type="submit"
+                disabled={isLoading}
               >
-                SIGN UP
+                {isLoading ?
+                  <Oval
+                    height={35}
+                    width={35}
+                    color='#f5ece5'
+                  /> :
+                  "SIGN UP"
+                }
               </button>
             </form>
             <hr class="z-10 w-full mt-4 border-black" />
