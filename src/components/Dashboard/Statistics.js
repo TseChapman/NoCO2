@@ -36,6 +36,7 @@ function Statistics() {
               height={200}
               width={200}
               color="#f5ece5"
+              secondaryColor="#b0aca2"
             />
           </div>
         )}
