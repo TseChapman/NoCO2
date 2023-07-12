@@ -46,6 +46,7 @@ function LoginPanel() {
       errorMessage = handleError(extractedText);
 
       setError(errorMessage);
+      throw new Error(errorMessage);
     }
   }
 
