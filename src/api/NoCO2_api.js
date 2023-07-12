@@ -89,6 +89,43 @@ export async function getEmissionStatistics(uid) {
   }
 }
 
+export async function getUserActivities(uid) {
+  if (uid == null) return;
+  try {
+    const url = "https://noco2.azurewebsites.net/api/get-user-activities";
+    const data = {
+      UserKey: uid
+    };
+    const requestOptions = {
+      //mode: 'no-cors',
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    };
+
+    const response = await fetch(url, requestOptions);
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+
+    const textData = await response.text();
+    const responseData = JSON.parse(textData);
+    //console.log("GetUserActivities Response:")
+    //console.log(responseData);
+    const activities = {
+      Transports: responseData.Transports ? responseData.Transports : [],
+      Foods: responseData.Foods? responseData.Foods : [],
+      Utilities: responseData.Utilities? responseData.Utilities : []
+    };
+    //console.log(activities);
+    return activities;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export async function submitUserActivities(uid, activities) {
   if (uid == null || activities == null) return;
   try {
