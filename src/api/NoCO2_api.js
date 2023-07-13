@@ -1,7 +1,7 @@
 export async function createUser(uid) {
   if (uid == null) return;
   try {
-    const url = "https://noco2.azurewebsites.net/api/create-user";
+    const url = `${process.env.REACT_APP_NOCO2_API_URL}/create-user`;
     const data = {
       UserKey: uid
     };
@@ -31,7 +31,7 @@ export async function createUser(uid) {
 export async function getEmissionHistory(uid) {
   if (uid == null) return;
   try {
-    const url = "https://noco2.azurewebsites.net/api/get-emission-history";
+    const url = `${process.env.REACT_APP_NOCO2_API_URL}/get-emission-history`;
     const data = {
       UserKey: uid
     };
@@ -63,7 +63,7 @@ export async function getEmissionHistory(uid) {
 export async function getEmissionStatistics(uid) {
   if (uid == null) return;
   try {
-    const url = "https://noco2.azurewebsites.net/api/get-emission-statistics";
+    const url = `${process.env.REACT_APP_NOCO2_API_URL}/get-emission-statistics`;
     const data = {
       UserKey: uid
     };
@@ -95,7 +95,7 @@ export async function getEmissionStatistics(uid) {
 export async function getUserActivities(uid) {
   if (uid == null) return;
   try {
-    const url = "https://noco2.azurewebsites.net/api/get-user-activities";
+    const url = `${process.env.REACT_APP_NOCO2_API_URL}/get-user-activities`;
     const data = {
       UserKey: uid
     };
@@ -133,7 +133,7 @@ export async function getUserActivities(uid) {
 export async function submitUserActivities(uid, activities) {
   if (uid == null || activities == null) return;
   try {
-    const url = "https://noco2.azurewebsites.net/api/submit-user-activity";
+    const url = `${process.env.REACT_APP_NOCO2_API_URL}/submit-user-activity`;
     const data = {
       UserKey: uid,
       Transports: activities?.Transports,
