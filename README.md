@@ -44,6 +44,19 @@ cd NoCO2
 npm install
 ```
 
+4. Define correct environment variables. Create a `.env` file for containing environment variables. Then, add the following environment variables accordingly to your backend url and firebase authentication configurations (Replace `...` accordingly).
+
+```
+REACT_APP_FIREBASE_API_KEY = "..."
+REACT_APP_FIREBASE_AUTH_DOMAIN = "..."
+REACT_APP_FIREBASE_PROJECT_ID = "..."
+REACT_APP_FIREBASE_STORAGE_BUCKET = "..."
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = "..."
+REACT_APP_FIREBASE_API_ID = "..."
+REACT_APP_FIREBASE_MEASUREMENT_ID = "..."
+REACT_APP_NOCO2_API_URL = "..."
+```
+
 ## Usage
 
 Once you have completed the installation steps, you can start using NoCO2:
