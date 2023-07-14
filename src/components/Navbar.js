@@ -31,11 +31,15 @@ function Navbar() {
   return (
     <header class="z-20 w-screen p-3 bg-cabbagePoint fixed">
       <div class="flex md:flex-grow h-12">
-        <div class="mr-auto">
+        <div class="mr-auto flex flex-row items-end">
           <img class="z-10 mt-2 w-11 h-10 object-cover" src={icon} alt='Icon'/>
+          {location.pathname !== '/NoCO2/about' && (
+            <Link to="/NoCO2/about">
+              <div class="h-11 ml-4 text-4xl text-white hover:text-cloudy hover:underline underline-offset-2">About</div>
+            </Link>
+          )}
         </div>
         <div class="ml-auto flex flex-row">
-          <div class="h-11">About</div>
           {location.pathname === '/NoCO2/' && (
             <Link to="/NoCO2/signup">
               <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl ml-4">Sign Up</button>
