@@ -11,8 +11,9 @@ function About() {
       <div class="px-4">
         <div className="w-full h-48 flex flex-row rounded-xl overflow-hidden">
           <div className="w-2/5 relative bg-white">
-            <div className="absolute inset-0 shadow-inner shadow-gray"></div>
-            <img className="w-full h-full object-contain" src={icon} alt="Icon" />
+            <div className="absolute inset-0 shadow-inner shadow-gray-300 p-2">
+              <img className="w-full h-full object-contain" src={icon} alt="Icon" />
+            </div>
           </div>
           <div className="w-3/5 p-2 bg-cloudy">
             <span className="text-white text-2xl">
