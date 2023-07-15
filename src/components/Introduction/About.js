@@ -5,7 +5,7 @@ function About() {
   const icon = require('../../assets/noco2-logo.png');
   return (
     <div
-      className="w-full h-screen bg-repeat bg-contain"
+      className="w-full min-h-screen bg-repeat bg-contain"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
