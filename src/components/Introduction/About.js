@@ -32,10 +32,12 @@ function About() {
             </div>
           </div>
           <div class="w-full flex flex-col md:flex-row mt-4 justify-around">
-            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 text-2xl" href="https://github.com/TseChapman"><img class="w-10 h-10 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Front-End Repository</a>
-            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 text-2xl" href="https://github.com/TseChapman"><img class="w-10 h-10 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Back-End Repository</a>
+            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 text-2xl" href="https://github.com/TseChapman/NoCO2"><img class="w-10 h-10 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Front-End Repository</a>
+            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 text-2xl" href="https://github.com/luc779/BackEndFunctions"><img class="w-10 h-10 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Back-End Repository</a>
           </div>
-          <div class="w-full mx-auto text-merino text-4xl">Developers</div>
+        </div>
+        <div class="bg-matrix rounded-xl p-2 mt-4">
+          <div class="w-full text-merino text-6xl flex justify-center">Developers</div>
           <div class="flex flex-col md:flex-row justify-center md:justify-around">
             <div class="flex flex-col bg-slate-100 rounded-xl w-80 md:w-2/5 p-2 justify-center items-center mx-auto my-4 md:m-4">
               <img class="h-auto w-4/5 rounded-full" src={aboutCtse} alt='Cheuk Hang Tse img' />
