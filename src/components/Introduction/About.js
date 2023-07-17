@@ -1,4 +1,7 @@
-import backgroundImage from '../../assets/AboutBg.jpg'
+import backgroundImage from '../../assets/AboutBg.jpg';
+import aboutCtse from  '../../assets/About/Aboutctse.jpg';
+import githubIcon from '../../assets/About/Github_black.png';
+import linkedInIcon from '../../assets/About/LinkedIN.png';
 
 function About() {
 
@@ -28,17 +31,30 @@ function About() {
               </span>
             </div>
           </div>
-          <div>
-            <div>
-              <div>ctse image</div>
-              <div>ctse about</div>
+          <div class="w-full flex flex-col md:flex-row mt-4 justify-around">
+            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 text-2xl" href="https://github.com/TseChapman"><img class="w-10 h-10 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Front-End Repository</a>
+            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 text-2xl" href="https://github.com/TseChapman"><img class="w-10 h-10 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Back-End Repository</a>
+          </div>
+          <div class="w-full mx-auto text-merino text-4xl">Developers</div>
+          <div class="flex flex-col md:flex-row justify-center md:justify-around">
+            <div class="flex flex-col bg-slate-100 rounded-xl w-80 md:w-2/5 p-2 justify-center items-center mx-auto my-4 md:m-4">
+              <img class="h-auto w-4/5 rounded-full" src={aboutCtse} alt='Cheuk Hang Tse img' />
+              <div class="text-3xl">Cheuk Hang Tse</div>
+              <div class="flex flex-row w-full justify-center items-center">
+                <div class="text-xl mr-2">Full-stack Developer</div>
+                <a class="p-1" href="https://github.com/TseChapman"><img class="w-10 h-10 rounded-xl hover:bg-slate-300" src={githubIcon} alt='Cheuk Hang Tse Github'/></a>
+                <a class="p-1" href="https://www.linkedin.com/in/cheuk-hang-chapman-tse/"><img class="w-10 h-10 rounded-xl hover:bg-slate-300" src={linkedInIcon} alt='Cheuk Hang Tse LinkedIn'/></a>
+              </div>
             </div>
-            <div>
+            <div class="flex flex-col bg-slate-100 rounded-xl w-80 md:w-2/5 p-2 justify-center items-center mx-auto my-4 md:m-4">
               <div>luc image</div>
               <div>luc about</div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="relative w-full h-4">
+        <a class="absolute bottom-0 right-0 text-xs text-sky-700" href="http://www.freepik.com">Background image designed by Nenilkime / Freepik</a>
       </div>
     </div>
   );
