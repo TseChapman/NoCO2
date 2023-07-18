@@ -1,11 +1,20 @@
+import { useState } from 'react';
 import backgroundImage from '../../assets/AboutBg.jpg';
 import aboutCtse from  '../../assets/About/Aboutctse.jpg';
 import githubIcon from '../../assets/About/Github_black.png';
 import linkedInIcon from '../../assets/About/LinkedIN.png';
 
 function About() {
-
+  const [isLoaded, setIsLoaded] = useState(false);
   const icon = require('../../assets/noco2-logo.png');
+
+  const animationDelay = 0.2;
+  const animationDuration = 1;
+
+  function handleLoaded() {
+    setIsLoaded(true);
+  }
+
   return (
     <div
       className="w-full min-h-screen bg-repeat bg-contain"
@@ -17,7 +26,13 @@ function About() {
         empty
       </div>
       <div class="px-4">
-        <div class="bg-matrix rounded-xl p-2">
+        <div
+          class="bg-matrix rounded-xl p-2 animate-slide-up-delay-1"
+          style={{
+            opacity: `${isLoaded ? '100' : '0'}`,
+          }}
+          onLoad={handleLoaded}
+        >
           <div className="w-full h-2/4 md:h-52 flex flex-col md:flex-row rounded-xl overflow-hidden">
             <div className="w-full md:w-2/5 relative bg-white">
               <div className="md:absolute inset-0 shadow-inner shadow-gray-300 p-2 flex items-center justify-center">
@@ -36,10 +51,25 @@ function About() {
             <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 text-2xl" href="https://github.com/luc779/BackEndFunctions"><img class="w-10 h-10 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Back-End Repository</a>
           </div>
         </div>
-        <div class="bg-matrix rounded-xl p-2 mt-4">
-          <div class="w-full text-merino text-6xl flex justify-center">Developers</div>
+        <div
+          class="bg-matrix rounded-xl p-2 mt-4 animate-slide-up-delay-2"
+          style={{
+            opacity: `${isLoaded ? '100' : '0'}`,
+          }}
+          onLoad={handleLoaded}
+        >
+          <div class="w-full font-bold text-merino text-6xl flex justify-center">Developers</div>
+          <hr class="z-10 w-full mt-4 border-merino" />
           <div class="flex flex-col md:flex-row justify-center md:justify-around">
-            <div class="flex flex-col bg-slate-100 rounded-xl w-80 md:w-2/5 p-2 justify-center items-center mx-auto my-4 md:m-4">
+            <div
+              class="flex flex-col bg-merino rounded-xl w-80 md:w-2/5 p-2 justify-center items-center mx-auto my-4 md:m-4 animate-slide-left"
+              style={{
+                animationDelay: `${1}s`,
+                animationDuration: `${animationDuration}s`,
+                opacity: `${isLoaded ? '100' : '0'}`,
+              }}
+              onLoad={handleLoaded}
+            >
               <img class="h-auto w-4/5 rounded-full" src={aboutCtse} alt='Cheuk Hang Tse img' />
               <div class="text-3xl">Cheuk Hang Tse</div>
               <div class="flex flex-row w-full justify-center items-center">
@@ -48,7 +78,15 @@ function About() {
                 <a class="p-1" href="https://www.linkedin.com/in/cheuk-hang-chapman-tse/"><img class="w-10 h-10 rounded-xl hover:bg-slate-300" src={linkedInIcon} alt='Cheuk Hang Tse LinkedIn'/></a>
               </div>
             </div>
-            <div class="flex flex-col bg-slate-100 rounded-xl w-80 md:w-2/5 p-2 justify-center items-center mx-auto my-4 md:m-4">
+            <div
+              class="flex flex-col bg-merino rounded-xl w-80 md:w-2/5 p-2 justify-center items-center mx-auto my-4 md:m-4 animate-slide-left"
+              style={{
+                animationDelay: `${1 + animationDelay}s`,
+                animationDuration: `${animationDuration}s`,
+                opacity: `${isLoaded ? '100' : '0'}`,
+              }}
+              onLoad={handleLoaded}
+            >
               <div>luc image</div>
               <div>luc about</div>
             </div>
