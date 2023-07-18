@@ -4,7 +4,7 @@
   <img width="460" height="300" src="./src/assets/noco2-logo.png">
 </p>
 
-NoCO2 is a React app that allows users to monitor their daily CO2 emissions by visualizing their emission history in a line chart. Users can input their daily activities through a form, which is then sent to the backend for CO2 emission calculation. The app also provides a dashboard page where users can view statistic cards, such as the highest emission activity or average emissions.
+NoCO2 is a React app that allows users to monitor their daily CO2 emissions by visualizing their emission history in a line chart. Users can input their daily activities through a form, which is then sent to the backend for CO2 emission calculation. The app also provides a dashboard page where users can view statistic cards, such as the highest or average emission activity.
 
 ## Table of Contents
 
@@ -44,7 +44,7 @@ cd NoCO2
 npm install
 ```
 
-4. Define correct environment variables. Create a `.env` file for containing environment variables. Then, add the following environment variables accordingly to your backend url and firebase authentication configurations (Replace `...` accordingly).
+4. Define correct environment variables. Create a `.env` file containing environment variables. Then, add the following environment variables to your backend URL and firebase authentication configurations (Replace `...` accordingly).
 
 ```
 REACT_APP_FIREBASE_API_KEY = "..."
@@ -71,4 +71,4 @@ You can now explore the different features of the app, including entering your d
 
 ## Backend
 
-The NoCO2 app relies on a backend for CO2 emission calculation. The backend code is located on a different repository. The backend is a C# .NET azure function project that perform emission calculation on user activities, then store data in a MySQL database hosted on AWS RDS. For more information, please check https://github.com/luc779/BackEndFunctions
+The NoCO2 app relies on a backend for CO2 emission calculation. The backend code is located on a different repository. The backend is a C# .NET Azure function project that performs emission calculation on user activities, then store data in a MySQL database hosted on AWS RDS. For more information, please check https://github.com/luc779/BackEndFunctions
