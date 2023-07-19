@@ -88,12 +88,12 @@ function About() {
               }}
               onLoad={handleLoaded}
             >
-              <img class="h-auto w-4/5 rounded-full" src={aboutLuc} alt='Cheuk Hang Tse img' />
+              <img class="h-auto w-4/5 rounded-full" src={aboutLuc} alt='Luc Debaupte img' />
               <div class="text-3xl">Luc Debaupte</div>
               <div class="flex flex-row w-full justify-center items-center">
                 <div class="text-xl mr-2">Full-stack Developer</div>
-                <a class="p-1" href="https://github.com/luc779"><img class="w-10 h-10 rounded-xl hover:bg-slate-300" src={githubIcon} alt='Cheuk Hang Tse Github'/></a>
-                <a class="p-1" href="https://www.linkedin.com/in/luc-debaupte/"><img class="w-10 h-10 rounded-xl hover:bg-slate-300" src={linkedInIcon} alt='Cheuk Hang Tse LinkedIn'/></a>
+                <a class="p-1" href="https://github.com/luc779"><img class="w-10 h-10 rounded-xl hover:bg-slate-300" src={githubIcon} alt='Luc Debaupte Github'/></a>
+                <a class="p-1" href="https://www.linkedin.com/in/luc-debaupte/"><img class="w-10 h-10 rounded-xl hover:bg-slate-300" src={linkedInIcon} alt='Luc Debaupte LinkedIn'/></a>
               </div>
             </div>
           </div>
