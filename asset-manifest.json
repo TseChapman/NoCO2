@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/NoCO2/static/css/main.ccde601b.css",
-    "main.js": "/NoCO2/static/js/main.6f0739c7.js",
+    "main.css": "/NoCO2/static/css/main.ae8ff548.css",
+    "main.js": "/NoCO2/static/js/main.54099af2.js",
     "static/js/787.18123145.chunk.js": "/NoCO2/static/js/787.18123145.chunk.js",
+    "static/media/AboutBg.jpg": "/NoCO2/static/media/AboutBg.4e4c9d1886d7de2bbea4.jpg",
     "static/media/BackgroundImage.jpg": "/NoCO2/static/media/BackgroundImage.7097c923c68a5f573721.jpg",
     "static/media/StatisticsCardBg.jpg": "/NoCO2/static/media/StatisticsCardBg.15fab9a40ca01f81dede.jpg",
+    "static/media/Aboutctse.jpg": "/NoCO2/static/media/Aboutctse.58c7315e9fb15d382b5f.jpg",
     "static/media/Logo2.png": "/NoCO2/static/media/Logo2.0f17ba9a258ed6e64be3.png",
+    "static/media/noco2-logo.png": "/NoCO2/static/media/noco2-logo.6a2037e2e1514c590cf9.png",
+    "static/media/Aboutluc.jpg": "/NoCO2/static/media/Aboutluc.a78d9ad0ada363216324.jpg",
     "static/media/Icon.png": "/NoCO2/static/media/Icon.89766b2aa808e6c00483.png",
     "index.html": "/NoCO2/index.html",
-    "main.ccde601b.css.map": "/NoCO2/static/css/main.ccde601b.css.map",
-    "main.6f0739c7.js.map": "/NoCO2/static/js/main.6f0739c7.js.map",
+    "main.ae8ff548.css.map": "/NoCO2/static/css/main.ae8ff548.css.map",
+    "main.54099af2.js.map": "/NoCO2/static/js/main.54099af2.js.map",
     "787.18123145.chunk.js.map": "/NoCO2/static/js/787.18123145.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccde601b.css",
-    "static/js/main.6f0739c7.js"
+    "static/css/main.ae8ff548.css",
+    "static/js/main.54099af2.js"
   ]
 }
