@@ -3,4 +3,5 @@ module.exports = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   testMatch: ['**/tests/**/*.test.js'],
+  setupFiles: ['dotenv/config'],
 };

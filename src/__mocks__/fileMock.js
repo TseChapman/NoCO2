@@ -1,3 +1,9 @@
 module.exports = 'path/to/Icon.png';
 module.exports = 'path/to/Logo2.png';
 module.exports = 'path/to/BackgroundImage.jpg';
+module.exports = 'path/to/AboutBg.jpg';
+module.exports = 'path/to/Aboutctse.jpg';
+module.exports = 'path/to/Aboutluc.jpg';
+module.exports = 'path/to/Github_black.png';
+module.exports = 'path/to/LinkedIN.png';
+module.exports = 'path/to/noco2-logo.png';

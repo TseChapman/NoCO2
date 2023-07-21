@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import backgroundImage from '../../assets/AboutBg.jpg';
 import aboutCtse from  '../../assets/About/Aboutctse.jpg';

@@ -6,13 +6,13 @@ import { initializeApp } from 'firebase/app';
 import '@testing-library/jest-dom/extend-expect';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBVHmKBMBp2DTgKdw5m2_V3YvABLSDZGvY",
-  authDomain: "noco2-e46fa.firebaseapp.com",
-  projectId: "noco2-e46fa",
-  storageBucket: "noco2-e46fa.appspot.com",
-  messagingSenderId: "132897901391",
-  appId: "1:132897901391:web:9b4e1576f845a10a60133a",
-  measurementId: "G-TWKRL8G2KT"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_API_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
