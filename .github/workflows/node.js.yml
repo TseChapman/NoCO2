@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm install
-      
+
     - name: Build Project
       run: npm run build
 
@@ -42,4 +42,7 @@ jobs:
         REACT_APP_FIREBASE_API_ID: ${{ secrets.REACT_APP_FIREBASE_API_ID }}
         REACT_APP_FIREBASE_MEASUREMENT_ID: ${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}
         REACT_APP_NOCO2_API_URL: ${{ secrets.REACT_APP_NOCO2_API_URL }}
+      run: echo "$REACT_APP_FIREBASE_API_KEY"
+
+    - name: Test variable
       run: npm test
