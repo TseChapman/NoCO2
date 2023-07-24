@@ -72,3 +72,5 @@ You can now explore the different features of the app, including entering your d
 ## Backend
 
 The NoCO2 app relies on a backend for CO2 emission calculation. The backend code is located on a different repository. The backend is a C# .NET Azure function project that performs emission calculation on user activities, then store data in a MySQL database hosted on AWS RDS. For more information, please check https://github.com/luc779/BackEndFunctions
+
+Furthermore, the design document for the backend Azure Functions can be viewed in this document: https://drive.google.com/file/d/1GhsvREe6oxBpPA_2FV8TNN9zLiPOAgXu/view?usp=sharing
