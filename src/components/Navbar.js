@@ -32,22 +32,22 @@ function Navbar() {
     <header class="z-20 w-screen p-3 bg-cabbagePoint fixed">
       <div class="flex md:flex-grow h-12">
         <div class="mr-auto flex flex-row items-end">
-          <img class="z-10 mt-auto w-11 h-10 object-cover" src={icon} alt='Icon'/>
+          <img class="z-10 mt-auto mb-auto sm:w-11 w-7 sm:h-10 h-6 object-cover" src={icon} alt='Icon'/>
           {location.pathname !== '/NoCO2/about' && (
             <Link to="/NoCO2/about">
-              <div className="mt-auto ml-5 text-2xl text-white text-end hover:text-cloudy hover:underline underline-offset-2">About</div>
+              <div className="mt-auto sm:ml-5 ml-2 sm:text-2xl text-md text-white text-end hover:text-cloudy hover:underline underline-offset-2">About</div>
             </Link>
           )}
         </div>
         <div class="ml-auto flex flex-row">
           {location.pathname === '/NoCO2/' && (
             <Link to="/NoCO2/signup">
-              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl ml-4">Sign Up</button>
+              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:ml-4 ml-2">Sign Up</button>
             </Link>
           )}
           {location.pathname === '/NoCO2/' && (
             <Link to="/NoCO2/login">
-              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl ml-4">Login</button>
+              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:ml-4 ml-2">Login</button>
             </Link>
           )}
           {location.pathname === '/NoCO2/about' && (
