@@ -75,9 +75,9 @@ function LoginPanel() {
   return (
     <div class="h-screen w-screen flex justify-center items-center">
       <CustomAlert message={error} />
-      <div class="z-10 mt-20 bg-cloudy/90  w-2/4 h-5/6 rounded-2xl p-4 flex items-center justify-center">
+      <div class="z-10 mt-20 bg-cloudy/90  w-5/6 sm:w-4/6 h-5/6 rounded-2xl p-4 flex items-center justify-center">
         <div class="z-10 bg-white w-full h-full rounded-2xl p-8 overflow-y-auto">
-          <div class="lg:text-5xl md:text-3xl text-2xl font-bold pb-4">Login</div>
+          <div class="lg:text-5xl md:text-3xl sm:text-2xl text-3xl font-bold pb-4">Login</div>
           <div>
             <form class="flex flex-col" onSubmit={onSubmitForm}>
               <label>
@@ -117,7 +117,7 @@ function LoginPanel() {
               </button>
             </form>
             <hr class="z-10 w-full mt-4 border-black" />
-            <div class="text-2xl mb-1">
+            <div class="sm:text-2xl text-sm mb-1">
               Don't have an account: <Link to="/NoCO2/signup" class="text-matrix hover:underline underline-offset-2">Sign Up</Link>
             </div>
           </div>
