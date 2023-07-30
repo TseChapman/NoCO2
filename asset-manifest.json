@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NoCO2/static/css/main.ae8ff548.css",
-    "main.js": "/NoCO2/static/js/main.54099af2.js",
+    "main.css": "/NoCO2/static/css/main.2856d32c.css",
+    "main.js": "/NoCO2/static/js/main.982d314e.js",
     "static/js/787.18123145.chunk.js": "/NoCO2/static/js/787.18123145.chunk.js",
     "static/media/AboutBg.jpg": "/NoCO2/static/media/AboutBg.4e4c9d1886d7de2bbea4.jpg",
     "static/media/BackgroundImage.jpg": "/NoCO2/static/media/BackgroundImage.7097c923c68a5f573721.jpg",
@@ -12,12 +12,12 @@
     "static/media/Aboutluc.jpg": "/NoCO2/static/media/Aboutluc.a78d9ad0ada363216324.jpg",
     "static/media/Icon.png": "/NoCO2/static/media/Icon.89766b2aa808e6c00483.png",
     "index.html": "/NoCO2/index.html",
-    "main.ae8ff548.css.map": "/NoCO2/static/css/main.ae8ff548.css.map",
-    "main.54099af2.js.map": "/NoCO2/static/js/main.54099af2.js.map",
+    "main.2856d32c.css.map": "/NoCO2/static/css/main.2856d32c.css.map",
+    "main.982d314e.js.map": "/NoCO2/static/js/main.982d314e.js.map",
     "787.18123145.chunk.js.map": "/NoCO2/static/js/787.18123145.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae8ff548.css",
-    "static/js/main.54099af2.js"
+    "static/css/main.2856d32c.css",
+    "static/js/main.982d314e.js"
   ]
 }
