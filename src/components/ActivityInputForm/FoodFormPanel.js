@@ -79,12 +79,12 @@ function FoodFormPanel({activities, setActivities}) {
                   <div class="flex items-center">
                     <div class="ml-auto">
                       <button
-                        class="md:w-20 md:h-20 w-16 h-16 bg-matrix rounded-2xl relative shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700"
+                        class="md:w-20 md:h-20 w-14 h-14 bg-matrix rounded-2xl relative shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700"
                         onClick={() => handleDeleteFood(food)}
                       >
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                          <div class="md:w-20 md:h-6 w-16 h-4 bg-slate-200 rounded-full rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
-                          <div class="md:w-20 md:h-6 w-16 h-4 bg-slate-200 rounded-full -rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
+                          <div class="md:w-20 md:h-6 w-14 h-4 bg-slate-200 rounded-full rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
+                          <div class="md:w-20 md:h-6 w-14 h-4 bg-slate-200 rounded-full -rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
                         </div>
                       </button>
                     </div>
@@ -99,7 +99,7 @@ function FoodFormPanel({activities, setActivities}) {
           <div class="md:w-2/5 w-full h-20 py-3 pl-3 pr-2">
             <select
               id="foodType"
-              class="px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
+              class="px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-lg text-left w-full h-full"
               name="food_method"
               defaultValue="Select Food Type"
             >

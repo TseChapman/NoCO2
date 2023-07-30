@@ -79,12 +79,12 @@ function TransportFormPanel({activities, setActivities}) {
                   <div class="flex items-center">
                     <div class="ml-auto">
                       <button
-                        class="md:w-20 md:h-20 w-16 h-16 bg-matrix rounded-2xl relative shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700"
+                        class="md:w-20 md:h-20 w-14 h-14 bg-matrix rounded-2xl relative shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700"
                         onClick={() => handleDeleteTransport(transport)}
                       >
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                          <div class="md:w-20 md:h-6 w-16 h-4 bg-slate-200 rounded-full rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
-                          <div class="md:w-20 md:h-6 w-16 h-4 bg-slate-200 rounded-full -rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
+                          <div class="md:w-20 md:h-6 w-14 h-4 bg-slate-200 rounded-full rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
+                          <div class="md:w-20 md:h-6 w-14 h-4 bg-slate-200 rounded-full -rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten shadow-inner shadow-gray-500"></div>
                         </div>
                       </button>
                     </div>
