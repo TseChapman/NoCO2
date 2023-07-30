@@ -58,7 +58,7 @@ function ActivityInputFormPanel() {
         <UtilityFormPanel activities={activities} setActivities={setActivities} />
         <div class="w-full h-24 mb-4">
           <button
-            class="w-full h-full bg-limeGreen rounded-2xl shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700 text-merino md:text-6xl text-5xl flex items-center justify-center"
+            class="w-full h-full bg-limeGreen rounded-2xl shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700 text-merino md:text-6xl sm:text-5xl text-3xl flex items-center justify-center"
             onClick={handleSubmitActivities}
             disabled={isLoading}
           >
