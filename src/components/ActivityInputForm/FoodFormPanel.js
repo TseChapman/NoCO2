@@ -72,7 +72,7 @@ function FoodFormPanel({activities, setActivities}) {
                 <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
                   {food.Type}
                 </td>
-                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
+                <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
                   {food.Amount}
                 </td>
                 <td class="md:px-6 px-2 py-2">
