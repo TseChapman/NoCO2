@@ -68,7 +68,7 @@ function Navbar() {
           )}
           {location.pathname === '/NoCO2/dashboard/activities' && (
             <Link to="/NoCO2/dashboard">
-              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl mr-4">Back</button>
+              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4">Back</button>
             </Link>
           )}
         </div>
