@@ -51,13 +51,13 @@ function FoodFormPanel({activities, setActivities}) {
             <tr>
               <th
                 scope="col"
-                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl text-lg font-medium text-gray-500 uppercase tracking-wider"
+                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-gray-500 uppercase tracking-wider"
               >
                 Food Type
               </th>
               <th
                 scope="col"
-                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl text-lg font-medium text-gray-500 uppercase tracking-wider"
+                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-gray-500 uppercase tracking-wider"
               >
                 Amount (Oz or Serving)
               </th>
@@ -69,10 +69,10 @@ function FoodFormPanel({activities, setActivities}) {
           <tbody class="bg-white divide-y divide-gray-200">
             {activities.Foods.map((food, idx) => (
               <tr key={idx}>
-                <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
+                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl text-xl">
                   {food.Type}
                 </td>
-                <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
+                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl text-xl">
                   {food.Amount}
                 </td>
                 <td class="md:px-6 px-2 py-2">
