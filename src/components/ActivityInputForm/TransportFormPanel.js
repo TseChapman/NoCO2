@@ -69,7 +69,7 @@ function TransportFormPanel({activities, setActivities}) {
           <tbody class="bg-white divide-y divide-gray-200">
             {activities.Transports.map((transport, idx) => (
               <tr key={idx}>
-                <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
+                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl text-xl">
                   {transport.Type}
                 </td>
                 <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl text-xl">
@@ -99,7 +99,7 @@ function TransportFormPanel({activities, setActivities}) {
           <div class="md:w-2/5 w-full h-20 py-3 pl-3 pr-2">
             <select
               id="transportType"
-              class="px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
+              class="px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-lg text-left w-full h-full"
               name="transport_method"
               defaultValue="Select Transport Type"
             >
@@ -118,7 +118,7 @@ function TransportFormPanel({activities, setActivities}) {
           <div class="md:w-2/5 w-full h-20 py-3 px-2">
             <input
               id="miles"
-              class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
+              class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-lg text-left w-full h-full"
               name="transport_miles"
               placeholder="Miles..."
               type='text'
