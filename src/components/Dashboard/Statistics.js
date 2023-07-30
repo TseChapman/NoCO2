@@ -46,6 +46,15 @@ function Statistics() {
           statistics.map((card, idx) => (
             <StatisticsCard key={idx} idx={idx} card={card} />
           ))}
+
+        {!isLoading &&
+          statistics?.length === 0 && (
+            <div
+              class="w-full text-center text-merino sm:text-4xl text-2xl font-bold"
+            >
+              Not Enough Data
+            </div>
+          )}
       </div>
     </div>
   );
