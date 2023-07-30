@@ -51,13 +51,13 @@ function FoodFormPanel({activities, setActivities}) {
             <tr>
               <th
                 scope="col"
-                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-gray-500 uppercase tracking-wider"
+                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-md font-medium text-gray-500 uppercase tracking-wider"
               >
                 Food Type
               </th>
               <th
                 scope="col"
-                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-gray-500 uppercase tracking-wider"
+                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-md font-medium text-gray-500 uppercase tracking-wider"
               >
                 Amount (Oz or Serving)
               </th>
@@ -69,10 +69,10 @@ function FoodFormPanel({activities, setActivities}) {
           <tbody class="bg-white divide-y divide-gray-200">
             {activities.Foods.map((food, idx) => (
               <tr key={idx}>
-                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl text-xl">
+                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
                   {food.Type}
                 </td>
-                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl text-xl">
+                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
                   {food.Amount}
                 </td>
                 <td class="md:px-6 px-2 py-2">
@@ -96,10 +96,10 @@ function FoodFormPanel({activities, setActivities}) {
           </tbody>
         </table>
         <div class="w-full flex md:flex-row flex-col bg-cloudy rounded-2xl">
-          <div class="md:w-2/5 w-full h-20 py-3 pl-3 pr-2">
+          <div class="md:w-2/5 w-full h-20 py-3 md:pl-3 pl-2 pr-2">
             <select
               id="foodType"
-              class="px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-lg text-left w-full h-full"
+              class="px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-md text-left w-full h-full"
               name="food_method"
               defaultValue="Select Food Type"
             >
@@ -131,15 +131,15 @@ function FoodFormPanel({activities, setActivities}) {
           <div class="md:w-2/5 w-full h-20 py-3 px-2">
             <input
               id="amount"
-              class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl text-xl text-left w-full h-full"
+              class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-md text-left w-full h-full"
               name="food_oz"
               placeholder="Oz or Serving..."
               type='text'
             />
           </div>
-          <div class="md:w-1/5 w-full h-20 py-3 pr-3 pl-2">
+          <div class="md:w-1/5 w-full h-20 py-3 md:pr-3 pr-2 pl-2">
             <button
-              class="bg-limeGreen shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700 rounded-2xl w-full h-full lg:text-xl md:text-base text-2xl text-merino font-bold px-2"
+              class="bg-limeGreen shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700 rounded-2xl w-full h-full lg:text-xl md:text-base sm:text-2xl text-lg text-merino font-bold px-2"
               onClick={handleAddFood}
             >
               Add Food
