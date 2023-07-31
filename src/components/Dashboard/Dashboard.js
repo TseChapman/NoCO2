@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getEmissionHistory } from '../../api/NoCO2_api';
+import { useNavigate } from 'react-router-dom';
 import '../../index.css';
 import LineGraph from './LineGraph';
 import EmissionDetailPanel from './EmissionDetailPanel';
 import Statistics from './Statistics';
 
 function Dashboard() {
-  const [emissionHistory,  setEmissionHistory] = useState([]);
+  const [emissionHistory, setEmissionHistory] = useState([]);
   const [goal, setGoal] = useState("60 lb");
   const [curEmission, setCurEmission] = useState("None");
 
+  const navigate = useNavigate(); // add useNavigate hook
+
   useEffect(() => {
-    const fetchData = async () => {
+    const auth = getAuth();
+    const fetchData = async (uid) => {
       try {
-        const auth = getAuth();
-        const uid = auth.currentUser ? auth.currentUser.uid : null;
         const emissions = await getEmissionHistory(uid);
         if (emissions.length !== 0) {
           const formattedEmissions = emissions.map((item) => ({
@@ -39,17 +41,29 @@ function Dashboard() {
       }
     };
 
-    fetchData();
-  }, []);
+    // Listen for authentication state changes
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, fetch the user's emission history
+        fetchData(user.uid);
+      } else {
+        // User is signed out, handle accordingly
+        navigate("/NoCO2/");
+      }
+    });
+
+    // Clean up the event listener when the component is unmounted
+    return () => unsubscribe();
+  }, [navigate]);
 
   return (
     <div>
-      <div class="text-7xl text-black/0 mb-3">
+      <div className="text-7xl text-black/0 mb-3">
         empty
       </div>
       <div>
-        <LineGraph emissionHistory={emissionHistory}/>
-        <EmissionDetailPanel goal={goal} curEmission={curEmission}/>
+        <LineGraph emissionHistory={emissionHistory} />
+        <EmissionDetailPanel goal={goal} curEmission={curEmission} />
         <Statistics />
       </div>
     </div>
