@@ -3,10 +3,13 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import StatisticsCard from "./StatisticsCard";
 import { Oval } from 'react-loader-spinner';
 import { getEmissionStatistics } from "../../api/NoCO2_api";
+import { useNavigate } from 'react-router-dom';
 
 function Statistics() {
   const [statistics, setStatistics] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const auth = getAuth();
@@ -30,13 +33,13 @@ function Statistics() {
         fetchData(user.uid);
       } else {
         // User is signed out, handle accordingly
-        console.log('User is signed out.');
+        navigate("/NoCO2/");
       }
     });
 
     // Clean up the event listener when the component is unmounted
     return () => unsubscribe();
-  }, []);
+  }, [navigate]);
 
   return (
     <div class="flex justify-center align-middle px-4 mb-4">
