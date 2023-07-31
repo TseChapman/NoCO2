@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -19,7 +20,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+// Get Auth Instance
+const auth = getAuth(app);
+
+// Set local persistence for the auth instance
+setPersistence(auth, browserLocalPersistence);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
