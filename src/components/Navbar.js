@@ -52,7 +52,7 @@ function Navbar() {
           )}
           {location.pathname === '/NoCO2/about' && (
             <button
-              class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-32 text-2xl mr-4"
+              class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4 mr-2"
               onClick={handleAboutBack}
             >
               Back
