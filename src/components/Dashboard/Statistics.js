@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import StatisticsCard from "./StatisticsCard";
 import { Oval } from 'react-loader-spinner';
 import { getEmissionStatistics } from "../../api/NoCO2_api";
@@ -9,11 +9,10 @@ function Statistics() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const auth = getAuth();
+    const fetchData = async (uid) => {
       try {
         setIsLoading(true);
-        const auth = getAuth();
-        const uid = auth.currentUser ? auth.currentUser.uid : null;
         const emissionStatistics = await getEmissionStatistics(uid);
         setStatistics(emissionStatistics);
         setIsLoading(false);
@@ -24,7 +23,19 @@ function Statistics() {
       }
     };
 
-    fetchData();
+    // Listen for authentication state changes
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, fetch the user's emission history
+        fetchData(user.uid);
+      } else {
+        // User is signed out, handle accordingly
+        console.log('User is signed out.');
+      }
+    });
+
+    // Clean up the event listener when the component is unmounted
+    return () => unsubscribe();
   }, []);
 
   return (
