@@ -72,7 +72,7 @@ function About() {
               }}
               onLoad={handleLoaded}
             >
-              <img class="h-auto w-4/5 rounded-full" src={aboutCtse} alt='Cheuk Hang Tse img' />
+              <img class="h-auto w-4/5 rounded-full hover:shadow-lg shadow-gray-900" src={aboutCtse} alt='Cheuk Hang Tse img' />
               <div class="sm:text-3xl text-xl">Cheuk Hang Tse</div>
               <div class="flex flex-row w-full justify-center items-center">
                 <div class="sm:text-xl mr-2">Full-stack Developer</div>
@@ -89,7 +89,7 @@ function About() {
               }}
               onLoad={handleLoaded}
             >
-              <img class="h-auto w-4/5 rounded-full" src={aboutLuc} alt='Luc Debaupte img' />
+              <img class="h-auto w-4/5 rounded-full hover:shadow-lg shadow-gray-900" src={aboutLuc} alt='Luc Debaupte img' />
               <div class="sm:text-3xl text-xl">Luc Debaupte</div>
               <div class="flex flex-row w-full justify-center items-center">
                 <div class="sm:text-xl mr-2">Full-stack Developer</div>
