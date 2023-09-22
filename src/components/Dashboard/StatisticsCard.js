@@ -37,10 +37,10 @@ function StatisticsCard({idx, card}) {
         onLoad={handleLoaded}
       >
         <div>
-          <div class="text-merino text-2xl">{card.Statistic}</div>
-          <div class="text-merino font-bold sm:text-5xl text-3xl">{card.Topic}</div>
+          <div class="font-heebo text-merino text-2xl">{card.Statistic}</div>
+          <div class="font-heebo text-merino font-bold sm:text-5xl text-3xl">{card.Topic}</div>
         </div>
-        <div class="text-merino font-bold sm:text-5xl text-3xl self-end">{card.Stat}</div>
+        <div class="font-heebo text-merino font-bold sm:text-5xl text-3xl self-end">{card.Stat}</div>
       </div>
     </div>
   );

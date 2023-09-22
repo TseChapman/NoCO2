@@ -45,23 +45,23 @@ function FoodFormPanel({activities, setActivities}) {
   return (
     <div class="w-full bg-matrix rounded-2xl p-3.5 mb-4">
       <div class="w-full h-full rounded-2xl bg-white p-3.5 overflow-y-auto">
-        <div class="lg:text-6xl md:text-5xl text-4xl font-bold mb-3">Food</div>
+        <div class="font-heebo lg:text-6xl md:text-5xl text-4xl font-bold mb-3">Food</div>
         <table class="min-w-full divide-y divide-gray-200 mb-3">
           <thead class="bg-gray-50">
             <tr>
               <th
                 scope="col"
-                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-md font-medium text-gray-500 uppercase tracking-wider"
+                class="font-heebo md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-md font-medium text-gray-500 uppercase tracking-wider"
               >
                 Food Type
               </th>
               <th
                 scope="col"
-                class="md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-md font-medium text-gray-500 uppercase tracking-wider"
+                class="font-heebo md:px-6 px-2 py-3 text-left lg:text-3xl md:text-2xl sm:text-xl text-md font-medium text-gray-500 uppercase tracking-wider"
               >
                 Amount (Oz or Serving)
               </th>
-              <th scope="col" class="relative md:px-6 px-2 py-3">
+              <th scope="col" class="font-heebo relative md:px-6 px-2 py-3">
                 <span class="sr-only">Delete</span>
               </th>
             </tr>
@@ -69,10 +69,10 @@ function FoodFormPanel({activities, setActivities}) {
           <tbody class="bg-white divide-y divide-gray-200">
             {activities.Foods.map((food, idx) => (
               <tr key={idx}>
-                <td class="md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
+                <td class="font-heebo md:px-6 px-2 py-2 whitespace-wrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
                   {food.Type}
                 </td>
-                <td class="md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
+                <td class="font-heebo md:px-6 px-2 py-2 whitespace-nowrap w-2/5 lg:text-3xl md:text-2xl sm:text-xl text-sm">
                   {food.Amount}
                 </td>
                 <td class="md:px-6 px-2 py-2">
@@ -99,7 +99,7 @@ function FoodFormPanel({activities, setActivities}) {
           <div class="md:w-2/5 w-full h-20 py-3 md:pl-3 pl-2 pr-2">
             <select
               id="foodType"
-              class="px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-md text-left w-full h-full"
+              class="font-heebo px-2 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-md text-left w-full h-full"
               name="food_method"
               defaultValue="Select Food Type"
             >
@@ -131,7 +131,7 @@ function FoodFormPanel({activities, setActivities}) {
           <div class="md:w-2/5 w-full h-20 py-3 px-2">
             <input
               id="amount"
-              class="px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-md text-left w-full h-full"
+              class="font-heebo px-3 border-none outline-none shadow-inner shadow-gray-300 rounded-xl lg:text-3xl md:text-2xl sm:text-xl text-md text-left w-full h-full"
               name="food_oz"
               placeholder="Oz or Serving..."
               type='text'
@@ -139,7 +139,7 @@ function FoodFormPanel({activities, setActivities}) {
           </div>
           <div class="md:w-1/5 w-full h-20 py-3 md:pr-3 pr-2 pl-2">
             <button
-              class="bg-limeGreen shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700 rounded-2xl w-full h-full lg:text-xl md:text-base sm:text-2xl text-lg text-merino font-bold px-2"
+              class="font-heebo bg-limeGreen shadow-sm shadow-gray-700 hover:shadow-md hover:shadow-gray-700 rounded-2xl w-full h-full lg:text-xl md:text-base sm:text-2xl text-lg text-merino font-bold px-2"
               onClick={handleAddFood}
             >
               Add Food

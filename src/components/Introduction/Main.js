@@ -26,13 +26,13 @@ export class Main extends Component {
             onLoad={this.state.handleLogoLoad}
           />
           <div
-            class="z-10 mt-4 w-4/5 lg:text-7xl md:text-6xl sm:text-5xl text-3xl text-center text-cabbagePoint animate-slide-up-delay-2"
+            class="font-heebo z-10 mt-4 w-4/5 lg:text-7xl md:text-6xl sm:text-5xl text-3xl text-center text-cabbagePoint animate-slide-up-delay-2"
             style={{opacity: `${this.state.logoLoaded ? '100' : '0'}`}}
           >
             Shape the Future!
           </div>
           <div
-            class="z-10 w-4/5 lg:text-7xl md:text-6xl sm:text-5xl text-3xl text-center text-cabbagePoint animate-slide-up-delay-3"
+            class="font-heebo z-10 w-4/5 lg:text-7xl md:text-6xl sm:text-5xl text-3xl text-center text-cabbagePoint animate-slide-up-delay-3"
             style={{opacity: `${this.state.logoLoaded ? '100' : '0'}`}}
           >
             Lets hit net zero CO2 in 2050
@@ -40,7 +40,7 @@ export class Main extends Component {
           <div class="w-full">
             <Link to="/NoCO2/signup" class="z-10 flex flex-col justify-center items-center">
               <button
-                class="z-10 sm:w-5/12 w-5/6 mt-12 bg-limeGreen hover:bg-merino rounded-2xl text-merino hover:text-limeGreen h-20 lg:text-5xl md:text-4xl text-3xl animate-slide-up-delay-4"
+                class="font-heebo z-10 sm:w-5/12 w-5/6 mt-12 bg-limeGreen hover:bg-merino rounded-2xl text-merino hover:text-limeGreen h-20 lg:text-5xl md:text-4xl text-3xl animate-slide-up-delay-4"
                 style={{opacity: `${this.state.logoLoaded ? '100' : '0'}`}}
               >
                 Lets Get Started

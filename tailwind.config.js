@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heebo: ['"Heebo"', ...defaultTheme.fontFamily.sans]
+      },
       colors: {
         'cabbagePoint': '#45523e',
         'cloudy': '#b0aca2',
