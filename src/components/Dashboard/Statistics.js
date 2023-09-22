@@ -64,7 +64,7 @@ function Statistics() {
         {!isLoading &&
           statistics?.length === 0 && (
             <div
-              class="w-full text-center text-merino sm:text-4xl text-2xl font-bold"
+              class="font-heebo w-full text-center text-merino sm:text-4xl text-2xl font-bold"
             >
               Not Enough Data
             </div>
