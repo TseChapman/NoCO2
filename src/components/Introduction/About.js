@@ -42,15 +42,15 @@ function About() {
               </div>
             </div>
             <div className="w-full md:w-3/5 p-2 bg-cloudy">
-              <span className="text-white sm:text-2xl text-lg">
+              <span className="font-heebo text-white sm:text-2xl text-lg">
                 NoCO2 is a React app that allows users to monitor their CO2 emissions.
                 The goal of this project is to help users keep an eye on their daily CO2 emissions and contribute to achieving the United States' net-zero CO2 emissions target by 2050.
               </span>
             </div>
           </div>
           <div class="w-full flex flex-col md:flex-row mt-4 justify-around">
-            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 sm:text-2xl text-lg" href="https://github.com/TseChapman/NoCO2"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Front-End Repository</a>
-            <a class="p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 sm:text-2xl text-lg" href="https://github.com/luc779/BackEndFunctions"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Back-End Repository</a>
+            <a class="font-heebo p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 sm:text-2xl text-lg" href="https://github.com/TseChapman/NoCO2"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Front-End Repository</a>
+            <a class="font-heebo p-1 rounded-xl bg-white my-2 md:my-0 mx-2 flex flex-row justify-center items-center hover:bg-slate-300 sm:text-2xl text-lg" href="https://github.com/luc779/BackEndFunctions"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl mr-2" src={githubIcon} alt='Cheuk Hang Tse Github'/>Back-End Repository</a>
           </div>
         </div>
         <div
@@ -60,7 +60,7 @@ function About() {
           }}
           onLoad={handleLoaded}
         >
-          <div class="w-full font-bold text-merino sm:text-6xl text-4xl flex justify-center">Developers</div>
+          <div class="font-heebo w-full font-bold text-merino sm:text-6xl text-4xl flex justify-center">Developers</div>
           <hr class="z-10 w-full mt-4 border-merino" />
           <div class="flex flex-col md:flex-row justify-center md:justify-around">
             <div
@@ -73,9 +73,9 @@ function About() {
               onLoad={handleLoaded}
             >
               <img class="h-auto w-4/5 rounded-full hover:shadow-lg shadow-gray-900" src={aboutCtse} alt='Cheuk Hang Tse img' />
-              <div class="sm:text-3xl text-xl">Cheuk Hang Tse</div>
+              <div class="font-heebo sm:text-3xl text-xl">Cheuk Hang Tse</div>
               <div class="flex flex-row w-full justify-center items-center">
-                <div class="sm:text-xl mr-2">Full-stack Developer</div>
+                <div class="font-heebo sm:text-xl mr-2">Full-stack Developer</div>
                 <a class="p-1" href="https://github.com/TseChapman"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl hover:bg-slate-300" src={githubIcon} alt='Cheuk Hang Tse Github'/></a>
                 <a class="p-1" href="https://www.linkedin.com/in/cheuk-hang-chapman-tse/"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl hover:bg-slate-300" src={linkedInIcon} alt='Cheuk Hang Tse LinkedIn'/></a>
               </div>
@@ -90,9 +90,9 @@ function About() {
               onLoad={handleLoaded}
             >
               <img class="h-auto w-4/5 rounded-full hover:shadow-lg shadow-gray-900" src={aboutLuc} alt='Luc Debaupte img' />
-              <div class="sm:text-3xl text-xl">Luc Debaupte</div>
+              <div class="font-heebo sm:text-3xl text-xl">Luc Debaupte</div>
               <div class="flex flex-row w-full justify-center items-center">
-                <div class="sm:text-xl mr-2">Full-stack Developer</div>
+                <div class="font-heebo sm:text-xl mr-2">Full-stack Developer</div>
                 <a class="p-1" href="https://github.com/luc779"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl hover:bg-slate-300" src={githubIcon} alt='Luc Debaupte Github'/></a>
                 <a class="p-1" href="https://www.linkedin.com/in/luc-debaupte/"><img class="sm:w-10 w-5 sm:h-10 h-5 rounded-xl hover:bg-slate-300" src={linkedInIcon} alt='Luc Debaupte LinkedIn'/></a>
               </div>
@@ -101,7 +101,7 @@ function About() {
         </div>
       </div>
       <div class="relative w-full h-4">
-        <a class="absolute bottom-0 right-0 text-xs text-sky-700" href="http://www.freepik.com">Background image designed by Nenilkime / Freepik</a>
+        <a class="font-heebo absolute bottom-0 right-0 text-xs text-sky-700" href="http://www.freepik.com">Background image designed by Nenilkime / Freepik</a>
       </div>
     </div>
   );
