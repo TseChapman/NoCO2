@@ -35,24 +35,24 @@ function Navbar() {
           <img class="z-10 mt-auto mb-auto sm:w-11 w-7 sm:h-10 h-6 object-cover" src={icon} alt='Icon'/>
           {location.pathname !== '/NoCO2/about' && (
             <Link to="/NoCO2/about">
-              <div className="mt-auto sm:ml-5 ml-2 sm:text-2xl text-md text-white text-end hover:text-cloudy hover:underline underline-offset-2">About</div>
+              <div className="font-heebo mt-auto sm:ml-5 ml-2 sm:text-2xl text-md text-white text-end hover:text-cloudy hover:underline underline-offset-2">About</div>
             </Link>
           )}
         </div>
         <div class="ml-auto flex flex-row">
           {location.pathname === '/NoCO2/' && (
             <Link to="/NoCO2/signup">
-              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:ml-4 ml-2">Sign Up</button>
+              <button class="font-heebo bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:ml-4 ml-2">Sign Up</button>
             </Link>
           )}
           {location.pathname === '/NoCO2/' && (
             <Link to="/NoCO2/login">
-              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:ml-4 ml-2">Login</button>
+              <button class="font-heebo bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:ml-4 ml-2">Login</button>
             </Link>
           )}
           {location.pathname === '/NoCO2/about' && (
             <button
-              class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4 mr-2"
+              class="font-heebo bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4 mr-2"
               onClick={handleAboutBack}
             >
               Back
@@ -60,7 +60,7 @@ function Navbar() {
           )}
           {location.pathname === '/NoCO2/dashboard' && (
             <button
-              class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4"
+              class="font-heebo bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4"
               onClick={handleSignOut}
             >
               Sign Out
@@ -68,7 +68,7 @@ function Navbar() {
           )}
           {location.pathname === '/NoCO2/dashboard/activities' && (
             <Link to="/NoCO2/dashboard">
-              <button class="bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4">Back</button>
+              <button class="font-heebo bg-cloudy hover:bg-merino h-11 rounded-xl text-merino hover:text-cloudy w-20 sm:w-32 sm:text-2xl text-lg sm:mr-4">Back</button>
             </Link>
           )}
         </div>
